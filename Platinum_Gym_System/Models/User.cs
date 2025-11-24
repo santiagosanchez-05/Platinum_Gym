@@ -13,8 +13,25 @@ namespace Platinum_Gym_System.Models
         [Required(ErrorMessage = "El CI es obligatorio.")]
         [RegularExpression(@"^\d{5,10}(-?[A-Za-z]{1,2})?$",
          ErrorMessage = "Formato inválido. Ejemplos válidos: 1234567, 1234567LP, 1234567-LP, 1234567A")]
-        public string CI { get; set; }
-
+        public string? CI { get; set; }
+        [StringLength(25, ErrorMessage = "Password must be minimun 6 and maximun 25 character long", MinimumLength = 6)]
+        [Display(Name = "Contraseña")]
+        [RegularExpression(
+        @"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).+$",
+        ErrorMessage = "Debe contener mayúscula, minúscula y número.")]
+        public string? Password { get; set; }
+        // 1 admin, 2 recepcionista, 3 cliente
+        [Required(ErrorMessage ="El rol es obligatorio")]
+        [Display(Name ="Rol")]
+        public byte Role { get; set; }
+        //1 activo 2 inactivo
+        [Required(ErrorMessage ="El estado es obligatorio")]
+        [Display(Name ="Estado")]
+        public byte State { get; set; }
+        [Display(Name ="Foto")]
+        [RegularExpression(@"^[\w\-/\\]+(\.(jpg|jpeg|png|gif|bmp))$",
+    ErrorMessage = "Debe ser una ruta válida de imagen.")]
+        public string? Photo { get; set; }
 
     }
 }
