@@ -32,6 +32,9 @@ namespace Platinum_Gym_System.Models
         [RegularExpression(@"^[\w\-/\\]+(\.(jpg|jpeg|png|gif|bmp))$",
     ErrorMessage = "Debe ser una ruta válida de imagen.")]
         public string? Photo { get; set; }
+        [Display(Name ="Correo")]
+        [EmailAddress(ErrorMessage ="El correo tiene que tener formato de mail")]
+        public string? Email { get; set; }
 
     }
 }

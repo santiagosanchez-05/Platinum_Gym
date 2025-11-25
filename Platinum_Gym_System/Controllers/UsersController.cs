@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -8,9 +9,11 @@ using Platinum_Gym_System.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Security.Claims;
 using System.Threading.Tasks;
-
+using Platinum_Gym_System.Services;
 namespace Platinum_Gym_System.Controllers
 {
     public class UsersController : Controller
@@ -98,22 +101,11 @@ namespace Platinum_Gym_System.Controllers
                 }
                 else
                 {
-                    var claims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.Name, "User"),
-                    new Claim("CI", CI),                       // claim personalizado
-                    new Claim(ClaimTypes.Role, rol.ToString()) // debe ser string
-                };
-
-                    var claimsIdentity = new ClaimsIdentity(claims,
-                        CookieAuthenticationDefaults.AuthenticationScheme);
-                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
-                        new ClaimsPrincipal(claimsIdentity));
                     ViewBag.UserName=userLogin.First().u.BillingName;
                     return View();
                 }
             }
-            ViewBag.Error = "User not found";
+            ViewBag.Error = "Usuario no registrado";
             return View();
         }
 
@@ -152,16 +144,37 @@ namespace Platinum_Gym_System.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("UserId,BillingName,CI,Password,Role,State,Photo")] User user)
+        public async Task<IActionResult> Create([Bind("UserId,BillingName,CI,Password,Role,State,Photo,Email")] User user)
         {
+            var user1 = await _context.Users.FirstOrDefaultAsync(u => u.CI == user.CI);
+            if (user1 != null)
+            {
+                ModelState.AddModelError(string.Empty, "No puede haber dos usuarios con el mismo CI");
+            }
+            if (user.Email == null)
+            {
+                ModelState.AddModelError(string.Empty, "El correo es obligatorio");
+
+            }
+            
             if (ModelState.IsValid)
             {
+                var random = new Random();
+                string Password ="156"+user.BillingName.Substring(0, 2)+user.CI+random.Next(100, 999);
+                Console.Write(Password);
+                var hasher = new PasswordHasher<User>();
+                string hash = hasher.HashPassword(user, Password);
+                user.Password= hash;
                 _context.Add(user);
                 await _context.SaveChangesAsync();
+                await EmailService.SendAsync(user.Email, "Tu acceso al sistema",
+                $"Tu contraseña generada es: {Password}");
+
                 return RedirectToAction(nameof(Index));
             }
             return View(user);
         }
+        
 
         // GET: Users/Edit/5
         public async Task<IActionResult> Edit(int? id)
