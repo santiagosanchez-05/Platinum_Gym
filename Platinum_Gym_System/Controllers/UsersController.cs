@@ -31,44 +31,106 @@ namespace Platinum_Gym_System.Controllers
         [HttpPost]
         public async Task<IActionResult> login2(User model)
         {
-            //var user =await _context.Users.FirstOrDefaultAsync(w=>w.Email==model.Email && w.Password==model.Password);
-            //if (user != null) {
-            //    return RedirectToAction("Index", "Home");
-            //}
-            //ViewBag.Error = "Incorrect Credentials";
-            //return View(model);
-            var userLogin = from u in _context.Users
-                            where u.CI == model.CI && u.Password== model.Password
-                            select new
-                            {
-                                u,
-                                RoleName = u.Role
+            // Obtener usuario solo por CI (no compares contraseña aquí)
+            var userBD = await _context.Users.FirstOrDefaultAsync(u => u.CI == model.CI);
 
-                            };
-            if (userLogin.Any())
+            // Usuario no encontrado
+            if (userBD == null)
             {
-                byte rol = userLogin.First().RoleName;
-                string CI = userLogin.First().u.CI;
+                ViewBag.Error = "User not found";
+                return View(model);
+            }
 
+            // Verificar contraseña hasheada
+            var hasher = new PasswordHasher<User>();
+            var result = hasher.VerifyHashedPassword(
+                userBD,             // entidad encontrada
+                userBD.Password,    // hash guardado en la BD
+                model.Password      // contraseña ingresada
+            );
 
-              
-                    var claims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.Name, "User"),
-                    new Claim("CI", CI),                       // claim personalizado
-                    new Claim(ClaimTypes.Role, rol.ToString()) // debe ser string
-                };
-
-                    var claimsIdentity = new ClaimsIdentity(claims,
-                        CookieAuthenticationDefaults.AuthenticationScheme);
-                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
-                        new ClaimsPrincipal(claimsIdentity));
-                    return RedirectToAction("Index","Home");
-             }
+            if (result != PasswordVerificationResult.Success)
+            {
+                ViewBag.Error = "Incorrect password";
+                return View(model);
+            }
             
-            ViewBag.Error = "User not found";
+            // Construcción de claims (manteniendo tus variables)
+            byte rol = userBD.Role;
+            string CI = userBD.CI;
+
+            var claims = new List<Claim>
+    {
+        new Claim(ClaimTypes.Name, "User"),
+        new Claim("CI", CI),
+        new Claim(ClaimTypes.Role, rol.ToString())
+    };
+
+            var claimsIdentity = new ClaimsIdentity(
+                claims,
+                CookieAuthenticationDefaults.AuthenticationScheme
+            );
+
+            await HttpContext.SignInAsync(
+                CookieAuthenticationDefaults.AuthenticationScheme,
+                new ClaimsPrincipal(claimsIdentity)
+            );
+            if (model.Password.StartsWith("156"))
+            {
+                return RedirectToAction("ChangePassword", new { ci = userBD.CI });
+            }
+            return RedirectToAction("Index", "Home");
+        }
+        public IActionResult ChangePassword(string ci)
+        {
+            if (string.IsNullOrEmpty(ci))
+            {
+                return RedirectToAction("Login");
+            }
+
+            ViewBag.CI = ci;
             return View();
         }
+
+        [HttpPost]
+        public async Task<IActionResult> ChangePassword(string ci, string newPassword, string confirmPassword)
+        {
+            if (string.IsNullOrEmpty(ci))
+                return RedirectToAction("Login");
+
+            if (newPassword != confirmPassword)
+            {
+                ViewBag.Error = "Las contraseñas no coinciden.";
+                ViewBag.CI = ci;
+                return View();
+            }
+            if (newPassword.StartsWith("156"))
+            {
+                ViewBag.Error = "Contrasena no valida";
+                ViewBag.CI = ci;
+                return View();  
+            }
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.CI == ci);
+
+            if (user == null)
+            {
+                ViewBag.Error = "Usuario no encontrado";
+                ViewBag.CI = ci;
+                return View();
+            }
+
+            var hasher = new PasswordHasher<User>();
+            user.Password = hasher.HashPassword(user, newPassword);
+
+            _context.Users.Update(user);
+            await _context.SaveChangesAsync();
+
+            ViewBag.Success = "La contraseña se cambió correctamente.";
+            ViewBag.CI = ci;
+
+            return View();
+        }
+
         public IActionResult Login()
         {
             return View();

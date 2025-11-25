@@ -10,11 +10,11 @@ namespace Platinum_Gym_System.Services
             var smtp = new SmtpClient("smtp.gmail.com")
             {
                 Port = 587,
-                Credentials = new NetworkCredential("santiagsanchez05@gmail.com", "TU_CLAVE_APP"),
+                Credentials = new NetworkCredential("mvaleriano1105@gmail.com", "topu yzup buav ywsw"),
                 EnableSsl = true
             };
 
-            return smtp.SendMailAsync("santiagsanchez05@gmail.com", to, subject, body);
+            return smtp.SendMailAsync("mvaleriano1105@gmail.com", to, subject, body);
         }
 
     }
