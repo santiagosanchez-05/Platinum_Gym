@@ -3,63 +3,148 @@
 @{
     ViewData["Title"] = "Index";
 }
+<link rel="stylesheet" href="~/css/ClientManagementStyleSheet.css" />
+<!-- Page Header -->
+<div class="page-header">
+    <h1 class="page-title">Client Management</h1>
+    <p class="page-subtitle">Manage client information, email banking, and history.</p>
+</div>
 
-<h1>Index</h1>
+<!-- Search and Actions -->
+<div class="row mb-4">
+    <div class="col-md-8">
+        <div class="search-box">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" class="form-control search-input" placeholder="Search by name, email, or ID...">
+        </div>
+    </div>
+    <div class="col-md-4 text-end">
+        <a class="btn btn-primary" asp-action="Create">
+            <i class="fas fa-plus-circle me-2"></i>Create New
+        </a>
+    </div>
+</div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.BillingName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CI)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Password)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Role)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.State)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Photo)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.BillingName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CI)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Password)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Role)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.State)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Photo)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.UserId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.UserId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.UserId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<!-- Client Cards (Opcional - puedes eliminar esta sección si no la necesitas) -->
+<div class="row mb-5">
+    <div class="col-md-4">
+        <div class="card client-card">
+            <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="client-avatar me-3">
+                        SP
+                    </div>
+                    <div>
+                        <div class="client-name">Service Admin</div>
+                        <div class="client-id">ID: 0001</div>
+                    </div>
+                </div>
+                <div class="client-details mb-2">
+                    <i class="fas fa-envelope me-2"></i>Send key items out...
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="status-badge status-active">Active</span>
+                    <small class="text-muted">Remote (E) 0000 / 1:01</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Más tarjetas de clientes... -->
+</div>
+
+<!-- Clients Table -->
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">All Clients</h5>
+        <div>
+            <button class="btn btn-sm btn-outline-secondary me-2">
+                <i class="fas fa-filter me-1"></i> Filter
+            </button>
+            <button class="btn btn-sm btn-outline-secondary">
+                <i class="fas fa-download me-1"></i> Export
+            </button>
+        </div>
+    </div>
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-hover mb-0">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.BillingName)</th>
+                        <th>@Html.DisplayNameFor(model => model.CI)</th>
+                        <th>@Html.DisplayNameFor(model => model.Password)</th>
+                        <th>@Html.DisplayNameFor(model => model.Role)</th>
+                        <th>@Html.DisplayNameFor(model => model.State)</th>
+                        <th>@Html.DisplayNameFor(model => model.Photo)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model) {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.BillingName)</td>
+                        <td>@Html.DisplayFor(modelItem => item.CI)</td>
+                        <td>••••••••</td> <!-- Mostrar contraseña oculta -->
+                        <td>
+                            @if(item.Role == 1) {
+                                <span class="status-badge status-active">Admin</span>
+                            } else if(item.Role == 2) {
+                                <span class="status-badge status-pending">Recepcionista</span>
+                            } else {
+                                <span>@Html.DisplayFor(modelItem => item.Role)</span>
+                            }
+                        </td>
+                        <td>
+                            @if(item.State == 1) {
+                                <span class="status-badge status-active">Active</span>
+                            } else {
+                                <span class="status-badge status-inactive">Inactive</span>
+                            }
+                        </td>
+                        <td>
+                            @if(!string.IsNullOrEmpty(item.Photo)) {
+                                <i class="fas fa-id-card text-primary"></i>
+                            } else {
+                                <span class="text-muted">No photo</span>
+                            }
+                        </td>
+                        <td>
+                            <a class="action-btn" asp-action="Edit" asp-route-id="@item.UserId" title="Edit">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <a class="action-btn" asp-action="Details" asp-route-id="@item.UserId" title="Details">
+                                <i class="fas fa-info-circle"></i>
+                            </a>
+                            <a class="action-btn text-danger" asp-action="Delete" asp-route-id="@item.UserId" title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Simple search functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.querySelector('.search-input');
+        if (searchInput) {
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                const rows = document.querySelectorAll('tbody tr');
+                
+                rows.forEach(row => {
+                    const text = row.textContent.toLowerCase();
+                    if (text.includes(searchTerm)) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+        }
+    });
+</script>

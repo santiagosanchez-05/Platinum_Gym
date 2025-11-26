@@ -6,30 +6,142 @@
     Layout = null;
 }
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Check-In</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="~/css/LoginStyleSheet.css"/>
 </head>
 <body>
-    @if (ViewBag.Error != null)
-    {
-        <h1>@ViewBag.Error</h1>
-    }
-    @if(ViewBag.UserName!=null)
-    {
-        <h1>Hola @ViewBag.UserName</h1>
-    }
-    <div class="row mt-5">
-        <div class="col offset-sm-4">
-            <form asp-action="Login">
-                <div class="form-group">
-                    <label asp-for="CI">CI</label>
-                    <input type="text" class="form-control" asp-for="CI" />
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-id-card-alt me-2"></i>MemberCheck
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Check-In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Members</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Reports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Settings</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    @if(ViewBag.UserName != null)
+                    {
+                        <div class="welcome-message text-center">
+                            <h3><i class="fas fa-check-circle me-2"></i>Welcome, @ViewBag.UserName!</h3>
+                            <p class="mb-0">You have been successfully checked in.</p>
+                        </div>
+                    }
+                    
+                    @if (ViewBag.Error != null)
+                    {
+                        <div class="alert alert-danger mb-4">
+                            <i class="fas fa-exclamation-triangle me-2"></i>@ViewBag.Error
+                        </div>
+                    }
+                    
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h2 class="card-title"><i class="fas fa-user-check me-2"></i>Member Check-In</h2>
+                            <p class="mb-0">Enter Member Name or ID to verify status.</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <h5 class="mb-3">Search by Name or ID</h5>
+                                <div class="input-group mb-3">
+                                    <span class="search-icon">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                    <input type="text" class="form-control search-input" placeholder="Search for a member...">
+                                    <button class="btn btn-primary" type="button">
+                                        <i class="fas fa-search me-1"></i> Search
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <hr class="my-4">
+                            
+                     
+                            <h5 class="mb-3">Member Login</h5>
+                            <form asp-action="Login">
+                                <div class="mb-3">
+                                    <label asp-for="CI" class="form-label">Member ID / CI</label>
+                                    <input type="text" class="form-control" asp-for="CI" placeholder="Enter your ID number">
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-sign-in-alt me-2"></i>Submit & Check-In
+                                    </button>
+                                </div>
+                            </form>
+                        
+                            <div class="mt-4 pt-3 border-top">
+                                <h6 class="mb-3">Subscription Status</h6>
+                                <div class="d-flex justify-content-between">
+                                    <span class="status-indicator status-active">
+                                        <i class="fas fa-circle me-1 small"></i> Active
+                                    </span>
+                                    <span class="status-indicator status-inactive">
+                                        <i class="fas fa-circle me-1 small"></i> Expired
+                                    </span>
+                                    <span class="status-indicator status-inactive">
+                                        <i class="fas fa-circle me-1 small"></i> Pending
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+              
+                    <div class="row mt-5">
+                        <div class="col-md-4 text-center mb-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-user-clock"></i>
+                            </div>
+                            <h5>Quick Check-In</h5>
+                            <p class="text-muted">Fast and efficient member verification process.</p>
+                        </div>
+                        <div class="col-md-4 text-center mb-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h5>Real-Time Status</h5>
+                            <p class="text-muted">View up-to-date membership status and details.</p>
+                        </div>
+                        <div class="col-md-4 text-center mb-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h5>Secure Access</h5>
+                            <p class="text-muted">Your member data is protected with advanced security.</p>
+                        </div>
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+            </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
