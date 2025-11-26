@@ -3,183 +3,74 @@
 @{
     ViewData["Title"] = "Create";
 }
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register New Client</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel=" stylesheet" href="~/css/CreateNewClientStyleSheet.css"/>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="fas fa-users-cog me-2"></i>Client Management
-            </a>
-        </div>
-    </nav>
+@{
+    ViewData["Title"] = "Create";
+}
+<link  rel="stylesheet" href="~/css/CreateNewClientStyleSheet.css"/>
+<h1>Create</h1>
 
-    <!-- Registration Form -->
-    <div class="registration-container">
-        <a href="#" class="back-link">
-            <i class="fas fa-arrow-left me-2"></i>Back to Client Management
-        </a>
+<h4>User</h4>
+<hr />
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <form asp-action="Create" class="create-form">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-        <div class="registration-card">
-            <div class="card-header">
-                <h1 class="card-title">Register New Client</h1>
-                <p class="card-subtitle">Guide your new clients through a simple registration process.</p>
-            </div>
-            
-            <div class="card-body">
-                <!-- Step Indicator -->
-                <div class="step-indicator">
-                    <div class="step active">
-                        <div class="step-circle">1</div>
-                        <div class="step-label">Personal Details</div>
+            <div class="form-section">
+                <h5 class="section-title">Personal Information</h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="BillingName" class="form-label"></label>
+                            <input asp-for="BillingName" class="form-control" placeholder="Enter full name" />
+                            <span asp-validation-for="BillingName" class="text-danger"></span>
+                        </div>
                     </div>
-                    <div class="step">
-                        <div class="step-circle">2</div>
-                        <div class="step-label">Account Setup</div>
-                    </div>
-                    <div class="step">
-                        <div class="step-circle">3</div>
-                        <div class="step-label">Confirmation</div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="CI" class="form-label"></label>
+                            <input asp-for="CI" class="form-control" placeholder="Enter identification number" />
+                            <span asp-validation-for="CI" class="text-danger"></span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Validation Summary -->
-                <div asp-validation-summary="ModelOnly" class="validation-summary-errors"></div>
-
-                <h3 class="section-title">Personal Details</h3>
-                
-                <form asp-action="Create">
-                    <!-- First Name & Last Name -->
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="form-label" asp-for="BillingName">First Name</label>
-                                <input type="text" class="form-control" placeholder="Enter first name" />
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="form-label">Last Name</label>
-                                <input type="text" class="form-control" placeholder="Enter last name" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Email Address -->
-                    <div class="form-group">
-                        <label class="form-label" asp-for="Email">Email Address</label>
-                        <input type="email" class="form-control" asp-for="Email" placeholder="Enter email address" />
-                        <span asp-validation-for="Email" class="field-validation-error"></span>
-                    </div>
-
-                    <!-- Phone Number & Date of Birth -->
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="form-label">Phone Number</label>
-                                <input type="tel" class="form-control" placeholder="Enter phone number" />
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="form-label">Date of Birth</label>
-                                <input type="text" class="form-control" placeholder="mm/dd/yyyy" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Address -->
-                    <div class="form-group">
-                        <label class="form-label">Address</label>
-                        <input type="text" class="form-control" placeholder="Enter full address" />
-                    </div>
-
-                    <!-- Hidden Fields and Additional Form Fields -->
-                    <div class="row mt-4">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="form-label" asp-for="CI">CI / Identification Number</label>
-                                <input type="text" class="form-control" asp-for="CI" placeholder="Enter identification number" />
-                                <span asp-validation-for="CI" class="field-validation-error"></span>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="form-label" asp-for="Role">Role</label>
-                                <select class="form-control" asp-for="Role">
-                                    <option value="">Select a role</option>
-                                    <option value="1">Admin</option>
-                                    <option value="2">Recepcionista</option>
-                                </select>
-                                <span asp-validation-for="Role" class="field-validation-error"></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Hidden State Field -->
-                    <input type="hidden" asp-for="State" value="1" />
-
-                    <!-- Form Actions -->
-                    <div class="form-actions">
-                        <button type="button" class="btn btn-outline-secondary">
-                            <i class="fas fa-arrow-left me-2"></i>Back
-                        </button>
-                        <button type="submit" class="btn btn-primary">
-                            Create Client<i class="fas fa-arrow-right ms-2"></i>
-                        </button>
-                    </div>
-                </form>
+                <div class="form-group">
+                    <label asp-for="Email" class="form-label"></label>
+                    <input asp-for="Email" class="form-control" placeholder="Enter email address" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
             </div>
-        </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Date input formatting
-        document.addEventListener('DOMContentLoaded', function() {
-            const dobInput = document.querySelector('input[placeholder="mm/dd/yyyy"]');
-            
-            if (dobInput) {
-                dobInput.addEventListener('input', function(e) {
-                    let value = e.target.value.replace(/\D/g, '');
-                    
-                    if (value.length >= 2) {
-                        value = value.substring(0, 2) + '/' + value.substring(2);
-                    }
-                    if (value.length >= 5) {
-                        value = value.substring(0, 5) + '/' + value.substring(5, 9);
-                    }
-                    
-                    e.target.value = value;
-                });
-            }
-            
-            // Phone input formatting
-            const phoneInput = document.querySelector('input[type="tel"]');
-            
-            if (phoneInput) {
-                phoneInput.addEventListener('input', function(e) {
-                    let value = e.target.value.replace(/\D/g, '');
-                    
-                    if (value.length >= 6) {
-                        value = '(' + value.substring(0, 3) + ') ' + value.substring(3, 6) + '-' + value.substring(6, 10);
-                    } else if (value.length >= 3) {
-                        value = '(' + value.substring(0, 3) + ') ' + value.substring(3);
-                    }
-                    
-                    e.target.value = value;
-                });
-            }
-        });
-    </script>
-</body>
-</html>
+            <div class="form-section">
+                <h5 class="section-title">Account Settings</h5>
+                <div class="form-group">
+                    <label asp-for="Role" class="form-label"></label>
+                    <select asp-for="Role" class="form-control">
+                        <option value="">Select a role</option>
+                        <option value="1">Admin</option>
+                        <option value="2">Recepcionista</option>
+                    </select>
+                    <span asp-validation-for="Role" class="text-danger"></span>
+                </div>
+            </div>
+
+            <input type="hidden" asp-for="State" value="1" />
+
+            <div class="form-actions">
+                <a asp-action="Index" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left me-2"></i>Back to List
+                </a>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-plus-circle me-2"></i>Create
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
