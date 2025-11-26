@@ -3,63 +3,317 @@
 @{
     ViewData["Title"] = "Index";
 }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link  rel="stylesheet" href="~/css/ClientManagementStyleSheet.css"/>
+</head>
+<body>
 
-<h1>Index</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-users-cog me-2"></i>Client Management
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-circle me-1"></i> Service Admin
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.BillingName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CI)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Password)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Role)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.State)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Photo)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.BillingName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CI)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Password)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Role)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.State)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Photo)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.UserId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.UserId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.UserId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <i class="fas fa-tachometer-alt"></i> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-user-friends"></i> Clients
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-envelope"></i> Email Banking
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-history"></i> History
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-cog"></i> Settings
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-headset"></i> Support
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9 col-lg-10 main-content">
+                <!-- Page Header -->
+                <div class="page-header">
+                    <h1 class="page-title">Client Management</h1>
+                    <p class="page-subtitle">Manage client information, email banking, and history.</p>
+                </div>
+
+                <!-- Search and Actions -->
+                <div class="row mb-4">
+                    <div class="col-md-8">
+                        <div class="search-box">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="text" class="form-control search-input" placeholder="Search by name, email, or ID...">
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-end">
+                        <a class="btn btn-primary" asp-action="Create">
+                            <i class="fas fa-plus-circle me-2"></i>Create New
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Client Cards -->
+                <div class="row mb-5">
+                    <div class="col-md-4">
+                        <div class="card client-card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="client-avatar me-3">
+                                        SP
+                                    </div>
+                                    <div>
+                                        <div class="client-name">Service Admin</div>
+                                        <div class="client-id">ID: 0001</div>
+                                    </div>
+                                </div>
+                                <div class="client-details mb-2">
+                                    <i class="fas fa-envelope me-2"></i>Send key items out...
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="status-badge status-active">Active</span>
+                                    <small class="text-muted">Remote (E) 0000 / 1:01</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card client-card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="client-avatar me-3" style="background: linear-gradient(135deg, #4cc9f0, #4361ee);">
+                                        C
+                                    </div>
+                                    <div>
+                                        <div class="client-name">Cliented</div>
+                                        <div class="client-id">ID: 1234</div>
+                                    </div>
+                                </div>
+                                <div class="client-details mb-2">
+                                    <i class="fas fa-user me-2"></i>Name: ID: 1234
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="status-badge status-active">Active</span>
+                                    <small class="text-muted">/ 1:01</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card client-card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="client-avatar me-3" style="background: linear-gradient(135deg, #f72585, #7209b7);">
+                                        EA
+                                    </div>
+                                    <div>
+                                        <div class="client-name">Enable Admin</div>
+                                        <div class="client-id">ID: 1234</div>
+                                    </div>
+                                </div>
+                                <div class="client-details mb-2">
+                                    <i class="fas fa-user me-2"></i>Name: ID: 1234
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="status-badge status-pending">Pending</span>
+                                    <small class="text-muted">/ 1:01</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Client Details Section -->
+                <div class="row mb-5">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <i class="fas fa-user me-2"></i>Elegner Pena Client
+                            </div>
+                            <div class="card-body">
+                                <div class="row mb-3">
+                                    <div class="col-sm-4 fw-bold">Personal Email:</div>
+                                    <div class="col-sm-8">clientopen@example.com</div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-sm-4 fw-bold">Address:</div>
+                                    <div class="col-sm-8">ID Telephone And Phone Only, E1 1064</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4 fw-bold">Phone Number:</div>
+                                    <div class="col-sm-8">(883) 338-8497</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <span><i class="fas fa-cog me-2"></i>Administration</span>
+                                <span class="status-badge status-active">Internet (E) 1026</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <span class="fw-bold">Membership:</span>
+                                    <span class="status-badge status-active">Active</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-3">
+                                    <span class="fw-bold">Purchase Identity:</span>
+                                    <span>Verified</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span class="fw-bold">Last Activity:</span>
+                                    <span>2 hours ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clients Table -->
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">All Clients</h5>
+                        <div>
+                            <button class="btn btn-sm btn-outline-secondary me-2">
+                                <i class="fas fa-filter me-1"></i> Filter
+                            </button>
+                            <button class="btn btn-sm btn-outline-secondary">
+                                <i class="fas fa-download me-1"></i> Export
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Billing Name</th>
+                                        <th>CI</th>
+                                        <th>Password</th>
+                                        <th>Role</th>
+                                        <th>State</th>
+                                        <th>Photo</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Sample Data - Replace with actual model data -->
+                                    <tr>
+                                        <td>John Smith</td>
+                                        <td>123456789</td>
+                                        <td>••••••••</td>
+                                        <td><span class="status-badge status-active">Admin</span></td>
+                                        <td><span class="status-badge status-active">Active</span></td>
+                                        <td><i class="fas fa-id-card"></i></td>
+                                        <td>
+                                            <button class="action-btn" title="Edit">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <button class="action-btn" title="Details">
+                                                <i class="fas fa-info-circle"></i>
+                                            </button>
+                                            <button class="action-btn text-danger" title="Delete">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Emily Johnson</td>
+                                        <td>987654321</td>
+                                        <td>••••••••</td>
+                                        <td><span class="status-badge status-pending">User</span></td>
+                                        <td><span class="status-badge status-active">Active</span></td>
+                                        <td><i class="fas fa-id-card"></i></td>
+                                        <td>
+                                            <button class="action-btn" title="Edit">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <button class="action-btn" title="Details">
+                                                <i class="fas fa-info-circle"></i>
+                                            </button>
+                                            <button class="action-btn text-danger" title="Delete">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <!-- Add more rows as needed -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Simple search functionality
+        document.querySelector('.search-input').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const rows = document.querySelectorAll('tbody tr');
+            
+            rows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
