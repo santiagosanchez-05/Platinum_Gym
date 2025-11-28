@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HRhfO5LLuwOSF31PSFu5tK6nbkgK8PJkSNpdIB0VdMQ=",
+  "Hash": "vNQtPJDS6OWBt7Skllz5QJJFJdLnsUxaxKl+KMCpCSQ=",
   "Source": "Platinum_Gym_System",
   "BasePath": "_content/Platinum_Gym_System",
   "Mode": "Default",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\LoginStyleSheet.css"
+    },
+    {
+      "Identity": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\wwwroot\\css\\ProductStyleSheet.css",
+      "SourceId": "Platinum_Gym_System",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\wwwroot\\",
+      "BasePath": "_content/Platinum_Gym_System",
+      "RelativePath": "css/ProductStyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\ProductStyleSheet.css"
     },
     {
       "Identity": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\wwwroot\\css\\site.css",
