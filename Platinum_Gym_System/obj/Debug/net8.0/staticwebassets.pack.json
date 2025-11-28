@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\css\\LoginStyleSheet.css"
     },
     {
+      "Id": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\wwwroot\\css\\ProductStyleSheet.css",
+      "PackagePath": "staticwebassets\\css\\ProductStyleSheet.css"
+    },
+    {
       "Id": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
