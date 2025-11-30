@@ -13,5 +13,8 @@ namespace Platinum_Gym_System.Data
 
         public DbSet<User> Users { get; set; }
         public DbSet<Product> Products { get; set; }    
+        public DbSet<Plan> Plans { get; set; }
+        public DbSet<Subscription> Subscriptions { get; set; }
+        public DbSet<Payment> Payments { get; set; }
     }
 }
