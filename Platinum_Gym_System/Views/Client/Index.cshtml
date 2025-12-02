@@ -1,0 +1,58 @@
+﻿@model List<Platinum_Gym_System.ViewModels.ClientIndexVM>
+
+<h2 class="mb-3">Listado de Clientes</h2>
+
+<!-- BOTÓN CREAR -->
+<a asp-action="Create" class="btn btn-success mb-3">
+    + Registrar Cliente
+</a>
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Cliente</th>
+            <th>CI</th>
+            <th>Inicio</th>
+            <th>Fin</th>
+            <th>Estado</th>
+            <th style="width:180px;">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.User.BillingName</td>
+                <td>@item.User.CI</td>
+                <td>@item.LastSubscription?.StartDate.ToShortDateString()</td>
+                <td>@item.LastSubscription?.EndDate.ToShortDateString()</td>
+                <td>
+                    @if (item.LastSubscription?.State == 1)
+                    {
+                        <span class="badge bg-success">Activo</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">Vencido</span>
+                    }
+                </td>
+                <td>
+                    <!-- EDITAR -->
+                    <a asp-action="Edit"
+                       asp-route-id="@item.User.UserId"
+                       class="btn btn-warning btn-sm">
+                        Editar
+                    </a>
+
+                    <!-- ELIMINAR -->
+                    <a asp-action="Delete"
+                       asp-route-id="@item.User.UserId"
+                       class="btn btn-danger btn-sm"
+                       onclick="return confirm('¿Estás seguro de eliminar este cliente?');">
+                        Eliminar
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

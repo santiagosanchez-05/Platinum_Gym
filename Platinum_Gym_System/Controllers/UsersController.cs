@@ -136,7 +136,7 @@ namespace Platinum_Gym_System.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> login(User model)
+        public async Task<IActionResult> Login(User model)
         {
             //var user =await _context.Users.FirstOrDefaultAsync(w=>w.Email==model.Email && w.Password==model.Password);
             //if (user != null) {
@@ -174,7 +174,7 @@ namespace Platinum_Gym_System.Controllers
         // GET: Users
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Users.ToListAsync());
+            return View(await _context.Users.Where(u=>u.State==1&&u.Role!=3).ToListAsync());
         }
 
         // GET: Users/Details/5
@@ -259,35 +259,53 @@ namespace Platinum_Gym_System.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("UserId,BillingName,CI,Password,Role,State,Photo")] User user)
+        public async Task<IActionResult> Edit(int id, [Bind("UserId,BillingName,CI,Role,State,Photo,Email")] User user)
         {
             if (id != user.UserId)
-            {
                 return NotFound();
-            }
+
+            var userBD = await _context.Users.AsNoTracking()
+                             .FirstOrDefaultAsync(u => u.UserId == id);
+
+            if (userBD == null)
+                return NotFound();
+
+            bool correoCambiado = userBD.Email != user.Email;
 
             if (ModelState.IsValid)
             {
                 try
                 {
+                    // Mantener contraseña original
+                    user.Password = userBD.Password;
+
                     _context.Update(user);
                     await _context.SaveChangesAsync();
+
+                    // ✅ Enviar correo SOLO si fue cambiado
+                    if (correoCambiado)
+                    {
+                        await EmailService.SendAsync(
+                            user.Email,
+                            "Cambio de correo exitoso",
+                            $"Hola {user.BillingName}, tu correo fue actualizado correctamente en el sistema."
+                        );
+                    }
                 }
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!UserExists(user.UserId))
-                    {
                         return NotFound();
-                    }
                     else
-                    {
                         throw;
-                    }
                 }
+
                 return RedirectToAction(nameof(Index));
             }
+
             return View(user);
         }
+
 
         // GET: Users/Delete/5
         public async Task<IActionResult> Delete(int? id)

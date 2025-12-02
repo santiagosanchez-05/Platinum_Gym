@@ -1,0 +1,35 @@
+﻿@model Platinum_Gym_System.ViewModels.ClientCreateVM
+
+<h2>Registrar Cliente</h2>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label>Nombre Facturación</label>
+        <input asp-for="BillingName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>CI</label>
+        <input asp-for="CI" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Plan</label>
+        <select asp-for="PlanId" class="form-control"
+                asp-items="@(new SelectList(Model.Plans, "PlanId", "Name"))">
+            <option value="">-- Seleccionar Plan --</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Método de Pago</label>
+        <select asp-for="PaymentMethod" class="form-control">
+            <option>Efectivo</option>
+            <option>QR</option>
+            <option>Tarjeta</option>
+        </select>
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-primary">Registrar</button>
+</form>
