@@ -51,6 +51,9 @@
                        onclick="return confirm('¿Estás seguro de eliminar este cliente?');">
                         Eliminar
                     </a>
+                     <a asp-action="Renew" asp-route-id="@item.User.UserId" class="btn btn-success btn-sm">
+                        Renovar
+                    </a>
                 </td>
             </tr>
         }

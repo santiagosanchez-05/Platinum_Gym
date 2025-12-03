@@ -225,7 +225,15 @@ namespace Platinum_Gym_System.Controllers
             var user = await _context.Users.FindAsync(id);
             if (user != null)
             {
-                _context.Users.Remove(user);
+                user.State = 0;
+                var activeSubs = await _context.Subscriptions
+                   .Where(s => s.UserId == id && s.State == 1)
+                   .ToListAsync();
+
+                foreach (var sub in activeSubs)
+                    sub.State = 0;
+                _context.Users.Update(user);
+
             }
 
             await _context.SaveChangesAsync();
@@ -236,5 +244,81 @@ namespace Platinum_Gym_System.Controllers
         {
             return _context.Users.Any(e => e.UserId == id);
         }
+        public async Task<IActionResult> Renew(int id)
+        {
+            var user = await _context.Users.FindAsync(id);
+            if (user == null) return NotFound();
+
+            var vm = new SubscriptionRenewVM
+            {
+                UserId = user.UserId,
+                Plans = await _context.Plans.Where(p => p.State == 1).ToListAsync()
+            };
+
+            return View(vm);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Renew(SubscriptionRenewVM vm)
+        {
+            using var transaction = await _context.Database.BeginTransactionAsync();
+
+            try
+            {
+                // 1️⃣ Obtener última suscripción del cliente
+                var lastSub = await _context.Subscriptions
+                    .Where(s => s.UserId == vm.UserId)
+                    .OrderByDescending(s => s.EndDate)
+                    .FirstOrDefaultAsync();
+
+                // 2️⃣ Obtener el nuevo plan
+                var plan = await _context.Plans.FindAsync(vm.PlanId);
+
+                // 3️⃣ Determinar fecha de inicio REALISTA
+                DateTime startDate;
+
+                if (lastSub != null && lastSub.EndDate > DateTime.Now)
+                    startDate = lastSub.EndDate;      // sigue activo → encadena
+                else
+                    startDate = DateTime.Now;         // estaba vencido → hoy
+
+                var endDate = startDate.AddMonths(plan.DurationMonths);
+
+                // 4️⃣ Crear nueva suscripción
+                var newSub = new Subscription
+                {
+                    UserId = vm.UserId,
+                    PlanId = plan.PlanId,
+                    StartDate = startDate,
+                    EndDate = endDate,
+                    State = 1
+                };
+
+                _context.Subscriptions.Add(newSub);
+                await _context.SaveChangesAsync();
+
+                // 5️⃣ Registrar nuevo pago
+                var payment = new Payment
+                {
+                    SubscriptionId = newSub.SubscriptionId,
+                    Amount = plan.Price,
+                    PaymentDate = DateTime.Now,
+                    PaymentMethod = vm.PaymentMethod,
+                    State = 1
+                };
+
+                _context.Payments.Add(payment);
+                await _context.SaveChangesAsync();
+
+                await transaction.CommitAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                await transaction.RollbackAsync();
+                throw;
+            }
+        }
+
     }
 }
