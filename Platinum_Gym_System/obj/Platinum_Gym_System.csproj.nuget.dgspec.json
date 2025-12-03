@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Platinum_Gym\\Platinum_Gym_System\\Platinum_Gym_System.csproj": {}
+    "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Platinum_Gym_System.csproj": {}
   },
   "projects": {
-    "D:\\Platinum_Gym\\Platinum_Gym_System\\Platinum_Gym_System.csproj": {
+    "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Platinum_Gym_System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Platinum_Gym\\Platinum_Gym_System\\Platinum_Gym_System.csproj",
+        "projectUniqueName": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Platinum_Gym_System.csproj",
         "projectName": "Platinum_Gym_System",
-        "projectPath": "D:\\Platinum_Gym\\Platinum_Gym_System\\Platinum_Gym_System.csproj",
-        "packagesPath": "C:\\Users\\usser\\.nuget\\packages\\",
-        "outputPath": "D:\\Platinum_Gym\\Platinum_Gym_System\\obj\\",
+        "projectPath": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Platinum_Gym_System.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\usser\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -67,6 +67,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[8.0.7, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.4, )"
             }
           },
           "imports": [
@@ -88,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

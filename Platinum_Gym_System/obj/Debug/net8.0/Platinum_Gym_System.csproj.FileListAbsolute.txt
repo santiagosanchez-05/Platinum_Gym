@@ -566,8 +566,11 @@ E:\PLATINIUM\Platinum_Gym\Platinum_Gym_System\obj\Debug\net8.0\refint\Platinum_G
 E:\PLATINIUM\Platinum_Gym\Platinum_Gym_System\obj\Debug\net8.0\Platinum_Gym_System.pdb
 E:\PLATINIUM\Platinum_Gym\Platinum_Gym_System\obj\Debug\net8.0\Platinum_Gym_System.genruntimeconfig.cache
 E:\PLATINIUM\Platinum_Gym\Platinum_Gym_System\obj\Debug\net8.0\ref\Platinum_Gym_System.dll
-E:\PLATINIUM\Platinum_Gym\Platinum_Gym_System\obj\Debug\net8.0\staticwebassets\msbuild.Platinum_Gym_System.Microsoft.AspNetCore.StaticWebAssets.props
-E:\PLATINIUM\Platinum_Gym\Platinum_Gym_System\obj\Debug\net8.0\staticwebassets\msbuild.build.Platinum_Gym_System.props
-E:\PLATINIUM\Platinum_Gym\Platinum_Gym_System\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Platinum_Gym_System.props
-E:\PLATINIUM\Platinum_Gym\Platinum_Gym_System\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Platinum_Gym_System.props
-E:\PLATINIUM\Platinum_Gym\Platinum_Gym_System\obj\Debug\net8.0\staticwebassets.pack.json
+E:\PLATINIUM\Platinum_Gym\Platinum_Gym_System\bin\Debug\net8.0\Platinum_Gym_System.staticwebassets.endpoints.json
+E:\PLATINIUM\Platinum_Gym\Platinum_Gym_System\obj\Debug\net8.0\rpswa.dswa.cache.json
+E:\PLATINIUM\Platinum_Gym\Platinum_Gym_System\obj\Debug\net8.0\rjimswa.dswa.cache.json
+E:\PLATINIUM\Platinum_Gym\Platinum_Gym_System\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+E:\PLATINIUM\Platinum_Gym\Platinum_Gym_System\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+E:\PLATINIUM\Platinum_Gym\Platinum_Gym_System\obj\Debug\net8.0\staticwebassets.build.json.cache
+E:\PLATINIUM\Platinum_Gym\Platinum_Gym_System\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+E:\PLATINIUM\Platinum_Gym\Platinum_Gym_System\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

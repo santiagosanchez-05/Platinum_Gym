@@ -44,7 +44,7 @@ namespace Platinum_Gym_System.Migrations
                     b.Property<byte>("State")
                         .HasColumnType("tinyint");
 
-                    b.Property<int?>("SubscriptionId")
+                    b.Property<int>("SubscriptionId")
                         .HasColumnType("int");
 
                     b.HasKey("PaymentId");
@@ -116,6 +116,59 @@ namespace Platinum_Gym_System.Migrations
                     b.HasKey("ProductId");
 
                     b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("Platinum_Gym_System.Models.Sale", b =>
+                {
+                    b.Property<int>("SaleId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SaleId"));
+
+                    b.Property<int?>("PaymentId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("SaleDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<double>("Total")
+                        .HasColumnType("float");
+
+                    b.HasKey("SaleId");
+
+                    b.HasIndex("PaymentId");
+
+                    b.ToTable("Sales");
+                });
+
+            modelBuilder.Entity("Platinum_Gym_System.Models.SaleDetail", b =>
+                {
+                    b.Property<int>("DetailId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DetailId"));
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SaleId")
+                        .HasColumnType("int");
+
+                    b.Property<double>("Subtotal")
+                        .HasColumnType("float");
+
+                    b.HasKey("DetailId");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("SaleId");
+
+                    b.ToTable("SaleDetails");
                 });
 
             modelBuilder.Entity("Platinum_Gym_System.Models.Subscription", b =>
@@ -190,9 +243,41 @@ namespace Platinum_Gym_System.Migrations
 
             modelBuilder.Entity("Platinum_Gym_System.Models.Payment", b =>
                 {
-                    b.HasOne("Platinum_Gym_System.Models.Subscription", null)
+                    b.HasOne("Platinum_Gym_System.Models.Subscription", "Subscription")
                         .WithMany("Payments")
-                        .HasForeignKey("SubscriptionId");
+                        .HasForeignKey("SubscriptionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Subscription");
+                });
+
+            modelBuilder.Entity("Platinum_Gym_System.Models.Sale", b =>
+                {
+                    b.HasOne("Platinum_Gym_System.Models.Payment", "Payment")
+                        .WithMany()
+                        .HasForeignKey("PaymentId");
+
+                    b.Navigation("Payment");
+                });
+
+            modelBuilder.Entity("Platinum_Gym_System.Models.SaleDetail", b =>
+                {
+                    b.HasOne("Platinum_Gym_System.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Platinum_Gym_System.Models.Sale", "Sale")
+                        .WithMany("SaleDetails")
+                        .HasForeignKey("SaleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+
+                    b.Navigation("Sale");
                 });
 
             modelBuilder.Entity("Platinum_Gym_System.Models.Subscription", b =>
@@ -217,6 +302,11 @@ namespace Platinum_Gym_System.Migrations
             modelBuilder.Entity("Platinum_Gym_System.Models.Plan", b =>
                 {
                     b.Navigation("Subscriptions");
+                });
+
+            modelBuilder.Entity("Platinum_Gym_System.Models.Sale", b =>
+                {
+                    b.Navigation("SaleDetails");
                 });
 
             modelBuilder.Entity("Platinum_Gym_System.Models.Subscription", b =>
