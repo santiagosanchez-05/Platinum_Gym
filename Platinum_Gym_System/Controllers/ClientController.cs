@@ -169,35 +169,35 @@ namespace Platinum_Gym_System.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("UserId,BillingName,CI,Role,State")] User user)
+        public async Task<IActionResult> Edit(int id, [Bind("UserId,BillingName,CI")] User formUser)
         {
-            if (id != user.UserId)
-            {
+            if (id != formUser.UserId)
                 return NotFound();
-            }
 
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
+                return View(formUser);
+
+            var user = await _context.Users.FindAsync(id);
+            if (user == null)
+                return NotFound();
+
+            // ✅ SOLO se actualiza lo permitido
+            user.BillingName = formUser.BillingName;
+            user.CI = formUser.CI;
+
+            try
             {
-                try
-                {
-                    _context.Update(user);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!UserExists(user.UserId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(user);
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!UserExists(user.UserId))
+                    return NotFound();
+                throw;
+            }
         }
+
 
         // GET: Client/Delete/5
         public async Task<IActionResult> Delete(int? id)

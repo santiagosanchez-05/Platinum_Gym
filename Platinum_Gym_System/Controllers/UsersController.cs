@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Platinum_Gym_System.Data;
 using Platinum_Gym_System.Models;
+using Platinum_Gym_System.Services;
+using Platinum_Gym_System.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +15,6 @@ using System.Net;
 using System.Net.Mail;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using Platinum_Gym_System.Services;
 namespace Platinum_Gym_System.Controllers
 {
     public class UsersController : Controller
@@ -138,38 +139,58 @@ namespace Platinum_Gym_System.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(User model)
         {
-            //var user =await _context.Users.FirstOrDefaultAsync(w=>w.Email==model.Email && w.Password==model.Password);
-            //if (user != null) {
-            //    return RedirectToAction("Index", "Home");
-            //}
-            //ViewBag.Error = "Incorrect Credentials";
-            //return View(model);
-            var userLogin = from u in _context.Users
-                            where u.CI == model.CI
-                            select new
-                            {
-                                u,
-                                RoleName = u.Role
-                            };
-            if (userLogin.Any())
-            {
-                byte rol = userLogin.First().RoleName;
-                string CI = userLogin.First().u.CI;
+            var userClient = await _context.Users
+                .FirstOrDefaultAsync(u => u.CI == model.CI && u.State == 1);
 
-               
-                if (rol != 3)
-                {
-                    return RedirectToAction(nameof(Login2));
-                }
-                else
-                {
-                    ViewBag.UserName=userLogin.First().u.BillingName;
-                    return View();
-                }
+            // ❌ CLIENTE NO REGISTRADO
+            if (userClient == null)
+            {
+                ViewBag.Error = "Cliente no registrado";
+                model.CI = "";
+                ModelState.Clear();
+                return View(model);
             }
-            ViewBag.Error = "Usuario no registrado";
-            return View();
+
+            // ❌ NO ES CLIENTE → VA A LOGIN2
+            if (userClient.Role != 3)
+            {
+                return RedirectToAction(nameof(Login2));
+            }
+
+            // ✅ OBTENER ÚLTIMA SUSCRIPCIÓN
+            var lastSub = await _context.Subscriptions
+                .Where(s => s.UserId == userClient.UserId && s.State == 1)
+                .OrderByDescending(s => s.EndDate)
+                .FirstOrDefaultAsync();
+
+            // ✅ ACTUALIZAR ESTADO SI YA VENCIÓ (MISMA LÓGICA QUE TU INDEX)
+            if (lastSub != null && lastSub.EndDate < DateTime.Now)
+            {
+                lastSub.State = 0;
+                _context.Subscriptions.Update(lastSub);
+                await _context.SaveChangesAsync();
+
+                // ⚠️ POPUP DE RENOVACIÓN
+                TempData["WelcomeClient"] = $"⚠️ {userClient.BillingName}";
+                TempData["CI"] = userClient.CI;
+                TempData["ExpireDate"] = "RENUEVA TU SUSCRIPCIÓN";
+
+                model.CI = "";
+                ModelState.Clear();
+                return View(model);
+            }
+
+            // ✅ CLIENTE ACTIVO → BIENVENIDO NORMAL
+            TempData["WelcomeClient"] = userClient.BillingName;
+            TempData["CI"] = userClient.CI;
+            TempData["ExpireDate"] = lastSub?.EndDate.ToString("dd/MM/yyyy");
+
+            model.CI = "";
+            ModelState.Clear();
+
+            return View(model);
         }
+
 
         // GET: Users
         public async Task<IActionResult> Index()
@@ -343,6 +364,11 @@ namespace Platinum_Gym_System.Controllers
         private bool UserExists(int id)
         {
             return _context.Users.Any(e => e.UserId == id);
+        }
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction(nameof(Login));
         }
     }
 }
