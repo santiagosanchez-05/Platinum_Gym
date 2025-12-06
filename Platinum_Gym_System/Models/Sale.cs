@@ -19,13 +19,11 @@ namespace Platinum_Gym_System.Models
         [DataType(DataType.Currency)]
         public double Total { get; set; }
 
-        // Relación con pago (opcional dependiendo del flujo)
-        public int? PaymentId { get; set; }
-
-        [ForeignKey("PaymentId")]
-        public Payment? Payment { get; set; }
-
-        // Relación 1..N con detalles
+        public ICollection<SalePayment>? SalePayments { get; set; }
         public ICollection<SaleDetail>? SaleDetails { get; set; }
+        public bool IsCancelled { get; set; } = false;
+
+        public ICollection<SaleCancellation>? Cancellations { get; set; }
+
     }
 }

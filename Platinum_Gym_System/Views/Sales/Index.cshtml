@@ -18,9 +18,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.Total)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Payment)
-            </th>
             <th></th>
         </tr>
     </thead>
@@ -34,12 +31,18 @@
                 @Html.DisplayFor(modelItem => item.Total)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Payment.PaymentMethod)
-            </td>
-            <td>
                 <a asp-action="Edit" asp-route-id="@item.SaleId">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.SaleId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.SaleId">Delete</a>
+                @* <a asp-action="Delete" asp-route-id="@item.SaleId">Delete</a> *@
+                    @if (!item.IsCancelled)
+                    {
+                        <a class="btn btn-danger btn-sm" asp-action="Cancel" asp-route-id="@item.SaleId">Anular</a>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">Anulada</span>
+                    }
+
             </td>
         </tr>
 }

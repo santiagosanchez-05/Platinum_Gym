@@ -17,6 +17,9 @@ namespace Platinum_Gym_System.Data
         public DbSet<Subscription> Subscriptions { get; set; }
         public DbSet<Payment> Payments { get; set; }
         public DbSet<Sale> Sales { get; set; }
-        public DbSet<SaleDetail> SaleDetails { get; set; }  
+        public DbSet<SaleDetail> SaleDetails { get; set; } 
+        public DbSet<SalePayment> SalePayments { get; set; }
+        public DbSet<SaleCancellation> SaleCancellations { get; set; }
+
     }
 }

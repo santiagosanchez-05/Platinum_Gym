@@ -3,15 +3,12 @@
 <h2>Crear Venta</h2>
 
 <form asp-action="Create" method="post" id="saleForm">
+    <div asp-validation-summary="All" class="text-danger"></div>
 
     <div class="mb-3">
         <label asp-for="Sale.SaleDate"></label>
-        <input asp-for="Sale.SaleDate" class="form-control" />
-    </div>
-
-    <div class="mb-3">
-        <label asp-for="Sale.PaymentId"></label>
-        <select asp-for="Sale.PaymentId" class="form-control" asp-items="ViewBag.PaymentId"></select>
+        <input asp-for="Sale.SaleDate" type="datetime-local" class="form-control" />
+        <span asp-validation-for="Sale.SaleDate" class="text-danger"></span>
     </div>
 
     <hr />
@@ -32,21 +29,41 @@
 
     <button type="button" class="btn btn-success" onclick="AgregarDetalle()">Agregar Producto</button>
 
-    <h3>Total: $<span id="TotalDisplay">0.00</span></h3>
+    <hr />
+    <h4>Pagos</h4>
 
-    <input type="hidden" name="Sale.Total" id="TotalHidden" />
+    <table class="table" id="PaymentsTable">
+        <thead>
+            <tr>
+                <th>Método</th>
+                <th>Monto</th>
+                <th>Fecha</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
 
-    <br />
-    <button type="submit" class="btn btn-primary">Guardar Venta</button>
+    <button type="button" class="btn btn-info" onclick="AgregarPago()">Agregar Pago</button>
+
+    <hr />
+    <h3>Total Venta: $<span id="TotalDisplay">0.00</span></h3>
+
+    <input asp-for="Sale.Total" id="TotalHidden" type="hidden" />
+
+    <button type="submit" class="btn btn-primary mt-3">Guardar Venta</button>
 </form>
 
 @section Scripts {
     <script>
-
-        // Obtener productos desde backend (con precio)
         var productos = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.Products));
 
+        // ===================== DETALLES =====================
         function AgregarDetalle() {
+            if (!productos || productos.length === 0) {
+                alert("No hay productos cargados en el sistema.");
+                return;
+            }
 
             var index = $("#DetalleTable tbody tr").length;
             var precioInicial = productos[0].price;
@@ -58,11 +75,9 @@
                         ${productos.map(p => `<option value="${p.productId}" data-price="${p.price}">${p.productName}</option>`).join("")}
                     </select>
                 </td>
-
                 <td>
                     <input class="form-control price" value="${precioInicial.toFixed(2)}" readonly />
                 </td>
-
                 <td>
                     <input type="number"
                            name="Items[${index}].Quantity"
@@ -70,7 +85,6 @@
                            value="1" min="1"
                            onchange="ActualizarFila(this)" />
                 </td>
-
                 <td>
                     <input class="form-control subtotal" value="${precioInicial.toFixed(2)}" readonly />
                     <input type="hidden"
@@ -78,7 +92,6 @@
                            value="${precioInicial.toFixed(2)}"
                            class="subtotalHidden" />
                 </td>
-
                 <td>
                     <button type="button" class="btn btn-danger" onclick="EliminarFila(this)">X</button>
                 </td>
@@ -102,28 +115,73 @@
             CalcularTotal();
         }
 
-
         function EliminarFila(btn) {
             $(btn).closest("tr").remove();
             ReindexarFilas();
             CalcularTotal();
         }
 
-        // 🔥 Corrige los nombres antes del envío
         function ReindexarFilas() {
             $("#DetalleTable tbody tr").each(function (i, row) {
                 $(row).find("select, input[name]").each(function () {
                     let name = $(this).attr("name");
-
                     if (name) {
-                        let newName = name.replace(/Items\[\d+\]/, `Items[${i}]`);
-                        $(this).attr("name", newName);
+                        $(this).attr("name", name.replace(/Items\[\d+\]/, `Items[${i}]`));
                     }
                 });
             });
         }
 
+        // ===================== PAGOS =====================
+        function AgregarPago() {
+            var index = $("#PaymentsTable tbody tr").length;
 
+            var row = `
+            <tr>
+                <td>
+                    <select name="Payments[${index}].PaymentMethod" class="form-control">
+                        <option value="Cash">Efectivo</option>
+                        <option value="Card">Tarjeta</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number"
+                           name="Payments[${index}].Amount"
+                           class="form-control paymentAmount"
+                           value="0"
+                           min="1" />
+                </td>
+                <td>
+                    <input name="Payments[${index}].PaymentDate"
+                           type="date"
+                           class="form-control"
+                           value="${new Date().toISOString().split('T')[0]}" />
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger" onclick="EliminarPago(this)">X</button>
+                </td>
+            </tr>`;
+
+            $("#PaymentsTable tbody").append(row);
+        }
+
+        function EliminarPago(btn) {
+            $(btn).closest("tr").remove();
+            ReindexarPagos();
+        }
+
+        function ReindexarPagos() {
+            $("#PaymentsTable tbody tr").each(function (i, row) {
+                $(row).find("select, input[name]").each(function () {
+                    let name = $(this).attr("name");
+                    if (name) {
+                        $(this).attr("name", name.replace(/Payments\[\d+\]/, `Payments[${i}]`));
+                    }
+                });
+            });
+        }
+
+        // ===================== TOTAL =====================
         function CalcularTotal() {
             var total = 0;
             $(".subtotal").each(function () {
@@ -131,18 +189,17 @@
             });
 
             $("#TotalDisplay").text(total.toFixed(2));
-            $("#TotalHidden").val(total.toFixed(2));
+            // manda número simple al backend (evitar problemas de cultura)
+            $("#TotalHidden").val(total);
         }
 
-        // 🔥 Antes de enviar, hacer reindexación y recalcular total
         $("#saleForm").submit(function () {
             ReindexarFilas();
+            ReindexarPagos();
             CalcularTotal();
         });
 
     </script>
 
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
+    <partial name="_ValidationScriptsPartial" />
 }

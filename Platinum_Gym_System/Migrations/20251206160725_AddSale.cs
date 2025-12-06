@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Platinum_Gym_System.Migrations
 {
     /// <inheritdoc />
-    public partial class AddSaleAndDetail : Migration
+    public partial class AddSale : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -18,17 +18,11 @@ namespace Platinum_Gym_System.Migrations
                     SaleId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     SaleDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Total = table.Column<double>(type: "float", nullable: false),
-                    PaymentId = table.Column<int>(type: "int", nullable: true)
+                    Total = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Sales", x => x.SaleId);
-                    table.ForeignKey(
-                        name: "FK_Sales_Payments_PaymentId",
-                        column: x => x.PaymentId,
-                        principalTable: "Payments",
-                        principalColumn: "PaymentId");
                 });
 
             migrationBuilder.CreateTable(
@@ -59,6 +53,30 @@ namespace Platinum_Gym_System.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "SalePayments",
+                columns: table => new
+                {
+                    SalePaymentId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    SaleId = table.Column<int>(type: "int", nullable: false),
+                    PaymentDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    PaymentMethod = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Amount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    ReferenceNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Notes = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SalePayments", x => x.SalePaymentId);
+                    table.ForeignKey(
+                        name: "FK_SalePayments_Sales_SaleId",
+                        column: x => x.SaleId,
+                        principalTable: "Sales",
+                        principalColumn: "SaleId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_SaleDetails_ProductId",
                 table: "SaleDetails",
@@ -70,9 +88,9 @@ namespace Platinum_Gym_System.Migrations
                 column: "SaleId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Sales_PaymentId",
-                table: "Sales",
-                column: "PaymentId");
+                name: "IX_SalePayments_SaleId",
+                table: "SalePayments",
+                column: "SaleId");
         }
 
         /// <inheritdoc />
@@ -80,6 +98,9 @@ namespace Platinum_Gym_System.Migrations
         {
             migrationBuilder.DropTable(
                 name: "SaleDetails");
+
+            migrationBuilder.DropTable(
+                name: "SalePayments");
 
             migrationBuilder.DropTable(
                 name: "Sales");

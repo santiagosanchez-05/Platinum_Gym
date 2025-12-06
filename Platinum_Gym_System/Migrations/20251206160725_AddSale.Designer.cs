@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Platinum_Gym_System.Data;
 
@@ -11,9 +12,11 @@ using Platinum_Gym_System.Data;
 namespace Platinum_Gym_System.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    partial class AppDBContextModelSnapshot : ModelSnapshot
+    [Migration("20251206160725_AddSale")]
+    partial class AddSale
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -126,9 +129,6 @@ namespace Platinum_Gym_System.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SaleId"));
 
-                    b.Property<bool>("IsCancelled")
-                        .HasColumnType("bit");
-
                     b.Property<DateTime>("SaleDate")
                         .HasColumnType("datetime2");
 
@@ -138,35 +138,6 @@ namespace Platinum_Gym_System.Migrations
                     b.HasKey("SaleId");
 
                     b.ToTable("Sales");
-                });
-
-            modelBuilder.Entity("Platinum_Gym_System.Models.SaleCancellation", b =>
-                {
-                    b.Property<int>("CancellationId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CancellationId"));
-
-                    b.Property<DateTime>("CancellationDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("CancelledBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Reason")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<int>("SaleId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CancellationId");
-
-                    b.HasIndex("SaleId");
-
-                    b.ToTable("SaleCancellations");
                 });
 
             modelBuilder.Entity("Platinum_Gym_System.Models.SaleDetail", b =>
@@ -314,17 +285,6 @@ namespace Platinum_Gym_System.Migrations
                     b.Navigation("Subscription");
                 });
 
-            modelBuilder.Entity("Platinum_Gym_System.Models.SaleCancellation", b =>
-                {
-                    b.HasOne("Platinum_Gym_System.Models.Sale", "Sale")
-                        .WithMany("Cancellations")
-                        .HasForeignKey("SaleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Sale");
-                });
-
             modelBuilder.Entity("Platinum_Gym_System.Models.SaleDetail", b =>
                 {
                     b.HasOne("Platinum_Gym_System.Models.Product", "Product")
@@ -381,8 +341,6 @@ namespace Platinum_Gym_System.Migrations
 
             modelBuilder.Entity("Platinum_Gym_System.Models.Sale", b =>
                 {
-                    b.Navigation("Cancellations");
-
                     b.Navigation("SaleDetails");
 
                     b.Navigation("SalePayments");
