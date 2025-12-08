@@ -27,8 +27,7 @@ namespace Platinum_Gym_System.Models
         [Range(0, int.MaxValue, ErrorMessage = "La cantidad debe ser un número positivo")]
         public int StockQuantity { get; set; } 
         [Display(Name = "Foto")] 
-        [RegularExpression(@"^[\w\-/\\]+(\.(jpg|jpeg|png|gif|bmp))$", ErrorMessage = "Debe ser una ruta válida de imagen.")]
-        [StringLength(255, ErrorMessage = "La ruta de la imagen no puede superar {1} caracteres")]
+      [StringLength(255, ErrorMessage = "La ruta de la imagen no puede superar {1} caracteres")]
 
         [DataType(DataType.ImageUrl)]
         public string? ProductImage { get; set; }

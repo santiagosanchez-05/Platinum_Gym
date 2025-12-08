@@ -1,0 +1,37 @@
+﻿@model List<Platinum_Gym_System.ViewModels.PlanActiveVM>
+
+@{
+    ViewData["Title"] = "Planes y Alumnos Activos";
+}
+
+<div class="container mt-4">
+    <h2>Planes y cantidad de alumnos activos</h2>
+    <hr />
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-warning">No hay planes registrados.</div>
+    }
+    else
+    {
+        <table class="table table-bordered table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>Plan</th>
+                    <th>Alumnos activos</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.PlanName</td>
+                        <td>@item.ActiveCount</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+    <a asp-controller="Reports" asp-action="Index" class="btn btn-secondary">Volver</a>
+</div>

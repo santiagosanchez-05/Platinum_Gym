@@ -1,0 +1,39 @@
+﻿@model List<Platinum_Gym_System.ViewModels.SnackReportVM>
+
+@{
+    ViewData["Title"] = "Snacks Vendidos (Últimos 30 días)";
+}
+
+<div class="container mt-4">
+    <h2>Reporte: Snacks Vendidos (Últimos 30 días)</h2>
+    <hr />
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-warning">No hay ventas registradas.</div>
+    }
+    else
+    {
+        <table class="table table-bordered table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>Snack</th>
+                    <th>Cantidad Vendida</th>
+                    <th>Ingresos (BS)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.ProductName</td>
+                        <td>@item.Quantity</td>
+                        <td>@string.Format("{0:N2} BS", item.Revenue)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+    <a asp-controller="Reports" asp-action="Index" class="btn btn-secondary">Volver</a>
+</div>

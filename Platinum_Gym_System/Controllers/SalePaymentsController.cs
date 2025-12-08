@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -8,6 +9,7 @@ using Platinum_Gym_System.Models;
 
 namespace Platinum_Gym_System.Controllers
 {
+    [Authorize]
     public class SalePaymentsController : Controller
     {
         private readonly AppDBContext _context;

@@ -1,0 +1,64 @@
+﻿@model List<Platinum_Gym_System.ViewModels.IncomeReportVM>
+
+@{
+    ViewData["Title"] = "Ingresos Diarios (Últimos 7 días)";
+}
+
+<div class="container mt-4">
+    <h2>Reporte: Ingresos Diarios (Últimos 7 días)</h2>
+    <hr />
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-warning">No existen ingresos registrados en los últimos 7 días.</div>
+    }
+    else
+    {
+        <table class="table table-bordered table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Ingresos</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Date.ToString("dd/MM/yyyy")</td>
+                        <td>@item.Total.ToString("C2")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <h4 class="mt-4">Gráfico de ingresos</h4>
+        <canvas id="incomeChart" height="90"></canvas>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script>
+            const labels = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(x => x.Date.ToString("dd/MM"))));
+            const data = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(x => x.Total)));
+
+            const ctx = document.getElementById('incomeChart');
+
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Ingresos',
+                        data: data,
+                        borderWidth: 2,
+                        fill: false,
+                        borderColor: 'blue',
+                        tension: 0.2
+                    }]
+                }
+            });
+        </script>
+    }
+
+    <a asp-controller="Reports" asp-action="Index" class="btn btn-secondary mt-3">Volver</a>
+</div>

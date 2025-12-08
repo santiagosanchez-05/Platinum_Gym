@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
 using Platinum_Gym_System.Data;
 using Platinum_Gym_System.Models;
@@ -11,8 +13,10 @@ using System.Threading.Tasks;
 
 namespace Platinum_Gym_System.Controllers
 {
+    [Authorize]
     public class ClientController : Controller
     {
+        
         private readonly AppDBContext _context;
 
         public ClientController(AppDBContext context)
@@ -278,6 +282,7 @@ namespace Platinum_Gym_System.Controllers
 
             try
             {
+                var endDate=DateTime.Now.Date;
                 // 1️⃣ Obtener última suscripción del cliente
                 var lastSub = await _context.Subscriptions
                     .Where(s => s.UserId == vm.UserId)
@@ -291,24 +296,44 @@ namespace Platinum_Gym_System.Controllers
                 DateTime startDate;
 
                 if (lastSub != null && lastSub.EndDate > DateTime.Now)
-                    startDate = lastSub.EndDate;      // sigue activo → encadena
-                else
-                    startDate = DateTime.Now;         // estaba vencido → hoy
-
-                var endDate = startDate.AddMonths(plan.DurationMonths);
-
-                // 4️⃣ Crear nueva suscripción
-                var newSub = new Subscription
                 {
-                    UserId = vm.UserId,
-                    PlanId = plan.PlanId,
-                    StartDate = startDate,
-                    EndDate = endDate,
-                    State = 1
-                };
+                    startDate = lastSub.StartDate;
+                    lastSub.State = 0;
+                    _context.Subscriptions.Update(lastSub);
+                    await _context.SaveChangesAsync();
+                }
+                else
+                {
+                    startDate = DateTime.Now;
+                }
+                if (startDate == lastSub.StartDate)
+                {
+                     endDate = lastSub.EndDate.AddMonths(plan.DurationMonths);
+                }
+                else
+                {
+                    endDate = startDate.AddMonths(plan.DurationMonths);
+                }
+                    // 4️⃣ Crear nueva suscripción
+                    var newSub = new Subscription
+                    {
+                        UserId = vm.UserId,
+                        PlanId = plan.PlanId,
+                        StartDate = startDate,
+                        EndDate = endDate,
+                        State = 1
+                    };
 
-                _context.Subscriptions.Add(newSub);
-                await _context.SaveChangesAsync();
+                try
+                {
+                    _context.Subscriptions.Add(newSub);
+                    await _context.SaveChangesAsync();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex); // O logger
+                    throw;
+                }
 
                 // 5️⃣ Registrar nuevo pago
                 var payment = new Payment
@@ -320,14 +345,13 @@ namespace Platinum_Gym_System.Controllers
                     State = 1
                 };
 
-                _context.Payments.Add(payment);
-                await _context.SaveChangesAsync();
 
                 await transaction.CommitAsync();
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            catch(Exception ex) 
             {
+                Console.WriteLine(ex.Message);
                 await transaction.RollbackAsync();
                 throw;
             }

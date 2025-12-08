@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Reportes del Sistema";
+}
+
+<h2>Reportes del Sistema</h2>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <a asp-controller="Reports" asp-action="PlansActive" class="btn btn-primary btn-lg btn-block">
+            Planes y Alumnos Activos
+        </a>
+    </div>
+
+    <div class="col-md-4">
+        <a asp-controller="Reports" asp-action="SnacksSold" class="btn btn-success btn-lg btn-block">
+            Snacks Vendidos
+        </a>
+    </div>
+
+    <div class="col-md-4">
+        <a asp-controller="Reports" asp-action="DailyIncome" class="btn btn-info btn-lg btn-block">
+            Ingresos Diarios
+        </a>
+    </div>
+</div>

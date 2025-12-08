@@ -86,22 +86,6 @@
                                 </div>
                             </td>
 
-                            <td class="product-image">
-                                @if (!string.IsNullOrEmpty(item.ProductImage))
-                                {
-                                    <div class="image-container">
-                                        <img src="@item.ProductImage" alt="@item.ProductName" class="product-thumb" />
-                                    </div>
-                                }
-                                else
-                                {
-                                    <div class="no-image">
-                                        <i class="fas fa-image"></i>
-                                        <span>Sin imagen</span>
-                                    </div>
-                                }
-                            </td>
-
                             <td class="product-actions">
                                 <div class="actions-container">
                                     <a asp-action="Edit" asp-route-id="@item.ProductId" class="btn-action btn-edit">

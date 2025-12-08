@@ -4,13 +4,6 @@
 
 <form asp-action="Create" method="post" id="saleForm">
     <div asp-validation-summary="All" class="text-danger"></div>
-
-    <div class="mb-3">
-        <label asp-for="Sale.SaleDate"></label>
-        <input asp-for="Sale.SaleDate" type="datetime-local" class="form-control" />
-        <span asp-validation-for="Sale.SaleDate" class="text-danger"></span>
-    </div>
-
     <hr />
     <h4>Productos de la Venta</h4>
 

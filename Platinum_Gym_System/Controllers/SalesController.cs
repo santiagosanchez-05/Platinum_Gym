@@ -9,10 +9,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace Platinum_Gym_System.Controllers
 {
+    [Authorize]
     public class SalesController : Controller
     {
         private readonly AppDBContext _context;
