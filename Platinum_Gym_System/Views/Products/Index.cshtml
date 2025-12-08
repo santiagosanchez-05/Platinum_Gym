@@ -3,13 +3,17 @@
 @{
     ViewData["Title"] = "Gestión de Productos";
 }
-<link rel="stylesheet" href="~/css/ProductStyleSheet.css"/>
-<div class="products-fullscreen">
+
+<link rel="stylesheet" href="~/css/ProductStyleSheet.css" />
+
+<div class="products-page">
+
     <div class="products-header">
         <h1 class="products-title">
             <i class="fas fa-dumbbell"></i>
             Productos del Gimnasio
         </h1>
+
         <a asp-action="Create" class="btn-create">
             <i class="fas fa-plus-circle"></i>
             Nuevo Producto
@@ -39,7 +43,7 @@
                         </th>
                         <th class="col-image">
                             <i class="fas fa-image"></i>
-                            @Html.DisplayNameFor(model => model.ProductImage)
+                            Imagen
                         </th>
                         <th class="col-actions">
                             <i class="fas fa-cogs"></i>
@@ -48,70 +52,72 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var item in Model) {
-                    <tr class="product-row">
-                        <td class="product-name">
-                            <div class="name-wrapper">
-                                <i class="fas fa-cube"></i>
-                                @Html.DisplayFor(modelItem => item.ProductName)
-                            </div>
-                        </td>
-                        <td class="product-category">
-                            <span class="category-badge category-@item.Category.ToLower()">
-                                @Html.DisplayFor(modelItem => item.Category)
-                            </span>
-                        </td>
-                        <td class="product-price">
-                            <span class="price-value">
-                                $@Html.DisplayFor(modelItem => item.Price)
-                            </span>
-                        </td>
-                        <td class="product-stock">
-                            <div class="stock-indicator">
-                                <span class="stock-value @GetStockClass(item.StockQuantity)">
-                                    @Html.DisplayFor(modelItem => item.StockQuantity)
-                                </span>
-                                <div class="stock-bar">
-                                    <div class="stock-fill @GetStockClass(item.StockQuantity)" 
-                                         style="width: @GetStockPercentage(item.StockQuantity)%"></div>
+                    @foreach (var item in Model)
+                    {
+                        <tr class="product-row">
+                            <td class="product-name">
+                                <div class="name-wrapper">
+                                    <i class="fas fa-cube"></i>
+                                    @Html.DisplayFor(modelItem => item.ProductName)
                                 </div>
-                            </div>
-                        </td>
-                        <td class="product-image">
-                            @if (!string.IsNullOrEmpty(item.ProductImage))
-                            {
-                                <div class="image-container">
-                                    <img src="@item.ProductImage" alt="@item.ProductName" class="product-thumb" />
-                                    <div class="image-overlay">
-                                        <i class="fas fa-search-plus"></i>
+                            </td>
+
+                            <td class="product-category">
+                                <span class="category-badge category-@item.Category.ToLower()">
+                                    @Html.DisplayFor(modelItem => item.Category)
+                                </span>
+                            </td>
+
+                            <td class="product-price">
+                                <span class="price-value">
+                                    $@Html.DisplayFor(modelItem => item.Price)
+                                </span>
+                            </td>
+
+                            <td class="product-stock">
+                                <div class="stock-indicator">
+                                    <span class="stock-value @GetStockClass(item.StockQuantity)">
+                                        @Html.DisplayFor(modelItem => item.StockQuantity)
+                                    </span>
+                                    <div class="stock-bar">
+                                        <div class="stock-fill @GetStockClass(item.StockQuantity)"
+                                             style="width: @GetStockPercentage(item.StockQuantity)%"></div>
                                     </div>
                                 </div>
-                            }
-                            else
-                            {
-                                <div class="no-image">
-                                    <i class="fas fa-image"></i>
-                                    <span>Sin imagen</span>
+                            </td>
+
+                            <td class="product-image">
+                                @if (!string.IsNullOrEmpty(item.ProductImage))
+                                {
+                                    <div class="image-container">
+                                        <img src="@item.ProductImage" alt="@item.ProductName" class="product-thumb" />
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="no-image">
+                                        <i class="fas fa-image"></i>
+                                        <span>Sin imagen</span>
+                                    </div>
+                                }
+                            </td>
+
+                            <td class="product-actions">
+                                <div class="actions-container">
+                                    <a asp-action="Edit" asp-route-id="@item.ProductId" class="btn-action btn-edit">
+                                        <i class="fas fa-edit"></i> Editar
+                                    </a>
+
+                                    <a asp-action="Details" asp-route-id="@item.ProductId" class="btn-action btn-details">
+                                        <i class="fas fa-eye"></i> Detalles
+                                    </a>
+
+                                    <a asp-action="Delete" asp-route-id="@item.ProductId" class="btn-action btn-delete">
+                                        <i class="fas fa-trash-alt"></i> Eliminar
+                                    </a>
                                 </div>
-                            }
-                        </td>
-                        <td class="product-actions">
-                            <div class="actions-container">
-                                <a asp-action="Edit" asp-route-id="@item.ProductId" class="btn-action btn-edit" title="Editar Producto">
-                                    <i class="fas fa-edit"></i>
-                                    <span>Editar</span>
-                                </a>
-                                <a asp-action="Details" asp-route-id="@item.ProductId" class="btn-action btn-details" title="Ver Detalles">
-                                    <i class="fas fa-eye"></i>
-                                    <span>Detalles</span>
-                                </a>
-                                <a asp-action="Delete" asp-route-id="@item.ProductId" class="btn-action btn-delete" title="Eliminar Producto">
-                                    <i class="fas fa-trash-alt"></i>
-                                    <span>Eliminar</span>
-                                </a>
-                            </div>
-                        </td>
-                    </tr>
+                            </td>
+                        </tr>
                     }
                 </tbody>
             </table>
@@ -119,14 +125,15 @@
     </div>
 </div>
 
+
 @functions {
     private string GetStockClass(int stock)
     {
         return stock <= 5 ? "critical" : stock <= 15 ? "warning" : "healthy";
     }
-    
+
     private int GetStockPercentage(int stock)
     {
-        return Math.Min(stock * 3, 100); // Máximo 100% para mejor visualización
+        return Math.Min(stock * 3, 100);
     }
 }

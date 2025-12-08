@@ -34,14 +34,22 @@ namespace Platinum_Gym_System.Controllers
         {
             // Obtener usuario solo por CI (no compares contraseña aquí)
             var userBD = await _context.Users.FirstOrDefaultAsync(u => u.CI == model.CI);
-
+            if (userBD.Role == 3)
+            {
+                ViewBag.Error = "Éste ingreso es solo para personal del gimnasio";
+                return View();
+            }
             // Usuario no encontrado
             if (userBD == null)
             {
-                ViewBag.Error = "User not found";
+                ViewBag.Error = "Usuario no encontrado";
                 return View(model);
             }
-
+            if (model.Password == null)
+            {
+                ViewBag.Error = "Debe ingresar una contraseña";
+                return View(model);
+            }
             // Verificar contraseña hasheada
             var hasher = new PasswordHasher<User>();
             var result = hasher.VerifyHashedPassword(
@@ -230,9 +238,14 @@ namespace Platinum_Gym_System.Controllers
         public async Task<IActionResult> Create([Bind("UserId,BillingName,CI,Password,Role,State,Photo,Email")] User user)
         {
             var user1 = await _context.Users.FirstOrDefaultAsync(u => u.CI == user.CI);
+            var user2= await _context.Users.FirstOrDefaultAsync(u=>u.Email==user.Email);
             if (user1 != null)
             {
                 ModelState.AddModelError(string.Empty, "No puede haber dos usuarios con el mismo CI");
+            }
+            if (user2 != null)
+            {
+                ModelState.AddModelError(string.Empty, "No puede haber dos usuarios con el mismo correo");
             }
             if (user.Email == null)
             {
@@ -292,7 +305,21 @@ namespace Platinum_Gym_System.Controllers
                 return NotFound();
 
             bool correoCambiado = userBD.Email != user.Email;
+            var user1 = await _context.Users.FirstOrDefaultAsync(u => u.CI == user.CI);
+            var user2 = await _context.Users.FirstOrDefaultAsync(u => u.Email == user.Email);
+            if (user1 != null)
+            {
+                ModelState.AddModelError(string.Empty, "No puede haber dos usuarios con el mismo CI");
+            }
+            if (user2 != null)
+            {
+                ModelState.AddModelError(string.Empty, "No puede haber dos usuarios con el mismo correo");
+            }
+            if (user.Email == null)
+            {
+                ModelState.AddModelError(string.Empty, "El correo es obligatorio");
 
+            }
             if (ModelState.IsValid)
             {
                 try

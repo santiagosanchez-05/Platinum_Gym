@@ -87,6 +87,13 @@ namespace Platinum_Gym_System.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(ClientCreateVM vm)
         {
+            var user1 = await _context.Users.FirstOrDefaultAsync(u => u.CI == vm.CI);
+
+            if (user1 != null)
+            {
+                ModelState.AddModelError(string.Empty, "No puede haber dos usuarios con el mismo CI");
+            }
+
             if (!ModelState.IsValid)
             {
                 vm.Plans = _context.Plans.Where(p => p.State == 1).ToList();
@@ -171,6 +178,12 @@ namespace Platinum_Gym_System.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("UserId,BillingName,CI")] User formUser)
         {
+            var user1 = await _context.Users.FirstOrDefaultAsync(u => u.CI == formUser.CI);
+
+            if (user1 != null)
+            {
+                ModelState.AddModelError(string.Empty, "No puede haber dos usuarios con el mismo CI");
+            }
             if (id != formUser.UserId)
                 return NotFound();
 

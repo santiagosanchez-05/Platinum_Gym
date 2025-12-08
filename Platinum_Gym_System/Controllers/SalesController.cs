@@ -268,7 +268,8 @@ namespace Platinum_Gym_System.Controllers
                 _context.Update(sale);
 
                 // Obtener usuario actual
-                var cancelledBy = User.Identity?.Name ?? "Sistema";
+                var userCI = User.FindFirst("CI")?.Value;
+                var cancelledBy = userCI;
 
                 // Registrar motivo + usuario
                 var cancellation = new SaleCancellation
