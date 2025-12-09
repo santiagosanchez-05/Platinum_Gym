@@ -95,7 +95,7 @@ namespace Platinum_Gym_System.Controllers
 
             if (user1 != null)
             {
-                ModelState.AddModelError(string.Empty, "No puede haber dos usuarios con el mismo CI");
+                ModelState.AddModelError(string.Empty, "There cannot be two users with the same ID number (CI).");
             }
 
             if (!ModelState.IsValid)
@@ -107,7 +107,7 @@ namespace Platinum_Gym_System.Controllers
             using var transaction = await _context.Database.BeginTransactionAsync();
             try
             {
-                // 1️⃣ CREAR USER
+                // 1️⃣ CREATE USER
                 var user = new User
                 {
                     BillingName = vm.BillingName,
@@ -119,10 +119,10 @@ namespace Platinum_Gym_System.Controllers
                 _context.Users.Add(user);
                 await _context.SaveChangesAsync();
 
-                // 2️⃣ OBTENER PLAN
+                // 2️⃣ GET PLAN
                 var plan = await _context.Plans.FindAsync(vm.PlanId);
 
-                // 3️⃣ CREAR SUBSCRIPCIÓN
+                // 3️⃣ CREATE SUBSCRIPTION
                 var subscription = new Subscription
                 {
                     UserId = user.UserId,
@@ -135,7 +135,7 @@ namespace Platinum_Gym_System.Controllers
                 _context.Subscriptions.Add(subscription);
                 await _context.SaveChangesAsync();
 
-                // 4️⃣ CREAR PAGO
+                // 4️⃣ CREATE PAYMENT
                 var payment = new Payment
                 {
                     SubscriptionId = subscription.SubscriptionId,
@@ -157,6 +157,7 @@ namespace Platinum_Gym_System.Controllers
                 throw;
             }
         }
+
 
 
         // GET: Client/Edit/5
@@ -186,8 +187,9 @@ namespace Platinum_Gym_System.Controllers
 
             if (user1 != null)
             {
-                ModelState.AddModelError(string.Empty, "No puede haber dos usuarios con el mismo CI");
+                ModelState.AddModelError(string.Empty, "There cannot be two users with the same ID number (CI).");
             }
+
             if (id != formUser.UserId)
                 return NotFound();
 
@@ -198,7 +200,7 @@ namespace Platinum_Gym_System.Controllers
             if (user == null)
                 return NotFound();
 
-            // ✅ SOLO se actualiza lo permitido
+            // ✅ Only update allowed fields
             user.BillingName = formUser.BillingName;
             user.CI = formUser.CI;
 
@@ -214,6 +216,7 @@ namespace Platinum_Gym_System.Controllers
                 throw;
             }
         }
+
 
 
         // GET: Client/Delete/5

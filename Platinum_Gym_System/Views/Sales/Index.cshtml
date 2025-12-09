@@ -1,14 +1,15 @@
 ﻿@model IEnumerable<Platinum_Gym_System.Models.Sale>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Sales List";
 }
 
-<h1>Index</h1>
+<h1>Sales</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
 <table class="table">
     <thead>
         <tr>
@@ -22,29 +23,30 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.SaleDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Total)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.SaleId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.SaleId">Details</a> |
-                @* <a asp-action="Delete" asp-route-id="@item.SaleId">Delete</a> *@
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SaleDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Total)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.SaleId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.SaleId">Details</a> |
+
                     @if (!item.IsCancelled)
                     {
-                        <a class="btn btn-danger btn-sm" asp-action="Cancel" asp-route-id="@item.SaleId">Anular</a>
+                        <a class="btn btn-danger btn-sm" asp-action="Cancel" asp-route-id="@item.SaleId">Cancel</a>
                     }
                     else
                     {
-                        <span class="badge bg-danger">Anulada</span>
+                        <span class="badge bg-danger">Cancelled</span>
                     }
 
-            </td>
-        </tr>
-}
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

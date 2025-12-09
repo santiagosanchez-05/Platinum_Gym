@@ -1,16 +1,16 @@
 ﻿@model Platinum_Gym_System.Models.Sale
 
 @{
-    ViewData["Title"] = "Detalles de Venta";
+    ViewData["Title"] = "Sale Details";
 }
 
-<h1>Detalles de Venta</h1>
+<h1>Sale Details</h1>
 
 <hr />
 
-<h4>Información de la Venta</h4>
+<h4>Sale Information</h4>
 <dl class="row">
-    <dt class="col-sm-2">Fecha</dt>
+    <dt class="col-sm-2">Date</dt>
     <dd class="col-sm-10">@Model.SaleDate</dd>
 
     <dt class="col-sm-2">Total</dt>
@@ -21,12 +21,12 @@
 
 @if (Model.SaleDetails != null && Model.SaleDetails.Any())
 {
-    <h4>Productos Vendidos</h4>
+    <h4>Sold Products</h4>
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th>Producto</th>
-                <th>Cantidad</th>
+                <th>Product</th>
+                <th>Quantity</th>
                 <th>Subtotal</th>
             </tr>
         </thead>
@@ -47,13 +47,13 @@
 
 @if (Model.SalePayments != null && Model.SalePayments.Any())
 {
-    <h4>Métodos de Pago</h4>
+    <h4>Payment Methods</h4>
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Método</th>
-                <th>Monto</th>
-                <th>Fecha</th>
+                <th>Method</th>
+                <th>Amount</th>
+                <th>Date</th>
             </tr>
         </thead>
         <tbody>
@@ -73,16 +73,16 @@
 
 @if (Model.IsCancelled)
 {
-    <h4 class="text-danger">⚠ Venta Anulada</h4>
+    <h4 class="text-danger">⚠ Sale Cancelled</h4>
 
     @if (Model.Cancellations != null)
     {
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th>Fecha</th>
-                    <th>Usuario</th>
-                    <th>Motivo</th>
+                    <th>Date</th>
+                    <th>User</th>
+                    <th>Reason</th>
                 </tr>
             </thead>
             <tbody>
@@ -100,14 +100,13 @@
 }
 
 <div class="mt-3">
-    <a asp-action="Edit" asp-route-id="@Model?.SaleId" class="btn btn-warning">Editar</a>
-    <a asp-action="Index" class="btn btn-secondary">Volver</a>
+    <a asp-action="Edit" asp-route-id="@Model?.SaleId" class="btn btn-warning">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Back</a>
 
     @if (!Model.IsCancelled)
     {
         <a asp-action="Cancel" asp-route-id="@Model?.SaleId" class="btn btn-danger">
-            Anular Venta
+            Cancel Sale
         </a>
-    }
     }
 </div>

@@ -1,16 +1,16 @@
 ﻿@model List<Platinum_Gym_System.ViewModels.PlanActiveVM>
 
 @{
-    ViewData["Title"] = "Planes y Alumnos Activos";
+    ViewData["Title"] = "Plans and Active Members";
 }
 
 <div class="container mt-4">
-    <h2>Planes y cantidad de alumnos activos</h2>
+    <h2>Plans and Number of Active Members</h2>
     <hr />
 
     @if (!Model.Any())
     {
-        <div class="alert alert-warning">No hay planes registrados.</div>
+        <div class="alert alert-warning">No plans registered.</div>
     }
     else
     {
@@ -18,7 +18,7 @@
             <thead>
                 <tr>
                     <th>Plan</th>
-                    <th>Alumnos activos</th>
+                    <th>Active Members</th>
                 </tr>
             </thead>
             <tbody>
@@ -33,5 +33,5 @@
         </table>
     }
 
-    <a asp-controller="Reports" asp-action="Index" class="btn btn-secondary">Volver</a>
+    <a asp-controller="Reports" asp-action="Index" class="btn btn-secondary">Back</a>
 </div>

@@ -1,16 +1,16 @@
 ﻿@model List<Platinum_Gym_System.ViewModels.SnackReportVM>
 
 @{
-    ViewData["Title"] = "Snacks Vendidos (Últimos 30 días)";
+    ViewData["Title"] = "Snacks Sold (Last 30 Days)";
 }
 
 <div class="container mt-4">
-    <h2>Reporte: Snacks Vendidos (Últimos 30 días)</h2>
+    <h2>Report: Snacks Sold (Last 30 Days)</h2>
     <hr />
 
     @if (!Model.Any())
     {
-        <div class="alert alert-warning">No hay ventas registradas.</div>
+        <div class="alert alert-warning">No sales recorded.</div>
     }
     else
     {
@@ -18,8 +18,8 @@
             <thead>
                 <tr>
                     <th>Snack</th>
-                    <th>Cantidad Vendida</th>
-                    <th>Ingresos (BS)</th>
+                    <th>Quantity Sold</th>
+                    <th>Revenue (BS)</th>
                 </tr>
             </thead>
             <tbody>
@@ -35,5 +35,5 @@
         </table>
     }
 
-    <a asp-controller="Reports" asp-action="Index" class="btn btn-secondary">Volver</a>
+    <a asp-controller="Reports" asp-action="Index" class="btn btn-secondary">Back</a>
 </div>

@@ -4,7 +4,7 @@
 }
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,18 +21,18 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
 
-                    <!-- Mensaje de bienvenida -->
+                    <!-- Welcome message -->
                     @if (ViewBag.UserName != null)
                     {
                         <div class="alert alert-success text-center mb-4">
                             <h4 class="mb-1">
-                                <i class="fas fa-check-circle me-2"></i>Bienvenido, @ViewBag.UserName
+                                <i class="fas fa-check-circle me-2"></i>Welcome, @ViewBag.UserName
                             </h4>
-                            <p class="mb-0">Tu registro de entrada fue exitoso.</p>
+                            <p class="mb-0">Your check-in was successful.</p>
                         </div>
                     }
 
-                    <!-- Errores -->
+                    <!-- Errors -->
                     @if (ViewBag.Error != null)
                     {
                         <div class="alert alert-danger mb-4">
@@ -40,40 +40,40 @@
                         </div>
                     }
 
-                    <!-- Tarjeta principal -->
+                    <!-- Main card -->
                     <div class="card shadow-lg border-0">
                         <div class="card-body p-4">
 
-                            <h4 class="text-center mb-4">Iniciar Sesión</h4>
+                            <h4 class="text-center mb-4">Login</h4>
 
                             <form asp-action="Login">
                                 <div class="mb-3">
-                                    <label asp-for="CI" class="form-label fw-bold">Número de Carnet (CI)</label>
-                                    <input asp-for="CI" type="text" class="form-control" placeholder="Ingresa tu CI">
+                                    <label asp-for="CI" class="form-label fw-bold">ID Card Number (CI)</label>
+                                    <input asp-for="CI" type="text" class="form-control" placeholder="Enter your CI">
                                 </div>
 
                                 <div class="d-grid">
                                     <button type="submit" class="btn btn-primary">
-                                        <i class="fas fa-sign-in-alt me-2"></i>Ingresar
+                                        <i class="fas fa-sign-in-alt me-2"></i>Check In
                                     </button>
                                 </div>
                             </form>
 
-                            <!-- Estado de la suscripción -->
+                            <!-- Subscription status -->
                             <div class="mt-4 pt-3 border-top">
-                                <h6 class="fw-bold text-center mb-3">Estado de la Suscripción</h6>
+                                <h6 class="fw-bold text-center mb-3">Subscription Status</h6>
 
                                 <div class="d-flex justify-content-around text-center">
                                     <span class="status-indicator status-active">
-                                        <i class="fas fa-circle me-1 small"></i>Activa
+                                        <i class="fas fa-circle me-1 small"></i>Active
                                     </span>
 
                                     <span class="status-indicator status-inactive">
-                                        <i class="fas fa-circle me-1 small"></i>Expirada
+                                        <i class="fas fa-circle me-1 small"></i>Expired
                                     </span>
 
                                     <span class="status-indicator status-inactive">
-                                        <i class="fas fa-circle me-1 small"></i>Pendiente
+                                        <i class="fas fa-circle me-1 small"></i>Pending
                                     </span>
                                 </div>
                             </div>
@@ -93,23 +93,23 @@
 @if (TempData["WelcomeClient"] != null)
 {
     <div id="welcomePopup" style="
-            position: fixed;
-            top: 20%;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #0d6efd;
-            color: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 0 25px rgba(0,0,0,0.5);
-            z-index: 9999;
-            text-align: center;
-            min-width: 330px;
-        ">
-        <h4 class="mb-2">Bienvenido</h4>
+                position: fixed;
+                top: 20%;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #0d6efd;
+                color: white;
+                padding: 25px;
+                border-radius: 12px;
+                box-shadow: 0 0 25px rgba(0,0,0,0.5);
+                z-index: 9999;
+                text-align: center;
+                min-width: 330px;
+            ">
+        <h4 class="mb-2">Welcome</h4>
         <p class="mb-1"><b>@TempData["WelcomeClient"]</b></p>
         <p class="mb-1">CI: @TempData["CI"]</p>
-        <p class="mb-0">Vence: @TempData["ExpireDate"]</p>
+        <p class="mb-0">Expires: @TempData["ExpireDate"]</p>
     </div>
 
     <script>

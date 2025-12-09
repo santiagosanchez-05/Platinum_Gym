@@ -48,53 +48,55 @@ namespace Platinum_Gym_System.Controllers
         // GET: Products/Create
         public IActionResult Create()
         {
-            // Opciones predefinidas para categorías
+            // Predefined category options
             ViewBag.Categories = new List<SelectListItem>
             {
-                new SelectListItem { Value = "Suplementos", Text = "Suplementos" },
-                new SelectListItem { Value = "Ropa", Text = "Ropa" },
-                new SelectListItem { Value = "Accesorios", Text = "Accesorios" },
-                new SelectListItem { Value = "Equipamiento", Text = "Equipamiento" },
-                new SelectListItem { Value = "Otros", Text = "Otros" }
+                new SelectListItem { Value = "Supplements", Text = "Supplements" },
+                new SelectListItem { Value = "Clothing", Text = "Clothing" },
+                new SelectListItem { Value = "Accessories", Text = "Accessories" },
+                new SelectListItem { Value = "Equipment", Text = "Equipment" },
+                new SelectListItem { Value = "Other", Text = "Other" }
             };
 
             return View();
         }
+
 
         // POST: Products/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ProductId,ProductName,Category,Price,StockQuantity,ProductImage")] Product product)
         {
-            // Validar si ya existe un producto con el mismo nombre
+            // Validate if a product with the same name already exists
             var existingProduct = await _context.Products
                 .FirstOrDefaultAsync(p => p.ProductName.ToLower() == product.ProductName.ToLower());
 
             if (existingProduct != null)
             {
-                ModelState.AddModelError("ProductName", "Ya existe un producto con este nombre.");
+                ModelState.AddModelError("ProductName", "A product with this name already exists.");
             }
 
             if (ModelState.IsValid)
             {
                 _context.Add(product);
                 await _context.SaveChangesAsync();
-                TempData["SuccessMessage"] = "Producto creado exitosamente.";
+                TempData["SuccessMessage"] = "Product created successfully.";
                 return RedirectToAction(nameof(Index));
             }
 
-            // Recargar las categorías si hay error
+            // Reload categories if validation fails
             ViewBag.Categories = new List<SelectListItem>
             {
-                new SelectListItem { Value = "Suplementos", Text = "Suplementos" },
-                new SelectListItem { Value = "Ropa", Text = "Ropa" },
-                new SelectListItem { Value = "Accesorios", Text = "Accesorios" },
-                new SelectListItem { Value = "Equipamiento", Text = "Equipamiento" },
-                new SelectListItem { Value = "Otros", Text = "Otros" }
+                new SelectListItem { Value = "Supplements", Text = "Supplements" },
+                new SelectListItem { Value = "Clothing", Text = "Clothing" },
+                new SelectListItem { Value = "Accessories", Text = "Accessories" },
+                new SelectListItem { Value = "Equipment", Text = "Equipment" },
+                new SelectListItem { Value = "Other", Text = "Other" }
             };
 
             return View(product);
         }
+
 
         // GET: Products/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -112,15 +114,16 @@ namespace Platinum_Gym_System.Controllers
 
             ViewBag.Categories = new List<SelectListItem>
             {
-                new SelectListItem { Value = "Suplementos", Text = "Suplementos", Selected = product.Category == "Suplementos" },
-                new SelectListItem { Value = "Ropa", Text = "Ropa", Selected = product.Category == "Ropa" },
-                new SelectListItem { Value = "Accesorios", Text = "Accesorios", Selected = product.Category == "Accesorios" },
-                new SelectListItem { Value = "Equipamiento", Text = "Equipamiento", Selected = product.Category == "Equipamiento" },
-                new SelectListItem { Value = "Otros", Text = "Otros", Selected = product.Category == "Otros" }
+                new SelectListItem { Value = "Supplements", Text = "Supplements", Selected = product.Category == "Supplements" },
+                new SelectListItem { Value = "Clothing", Text = "Clothing", Selected = product.Category == "Clothing" },
+                new SelectListItem { Value = "Accessories", Text = "Accessories", Selected = product.Category == "Accessories" },
+                new SelectListItem { Value = "Equipment", Text = "Equipment", Selected = product.Category == "Equipment" },
+                new SelectListItem { Value = "Other", Text = "Other", Selected = product.Category == "Other" }
             };
 
             return View(product);
         }
+
 
         // POST: Products/Edit/5
         [HttpPost]
@@ -132,13 +135,13 @@ namespace Platinum_Gym_System.Controllers
                 return NotFound();
             }
 
-            // Validar nombre único excluyendo el producto actual
+            // Validate unique name excluding the current product
             var existingProduct = await _context.Products
                 .FirstOrDefaultAsync(p => p.ProductName.ToLower() == product.ProductName.ToLower() && p.ProductId != id);
 
             if (existingProduct != null)
             {
-                ModelState.AddModelError("ProductName", "Ya existe un producto con este nombre.");
+                ModelState.AddModelError("ProductName", "A product with this name already exists.");
             }
 
             if (ModelState.IsValid)
@@ -147,7 +150,7 @@ namespace Platinum_Gym_System.Controllers
                 {
                     _context.Update(product);
                     await _context.SaveChangesAsync();
-                    TempData["SuccessMessage"] = "Producto actualizado exitosamente.";
+                    TempData["SuccessMessage"] = "Product updated successfully.";
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -165,15 +168,16 @@ namespace Platinum_Gym_System.Controllers
 
             ViewBag.Categories = new List<SelectListItem>
             {
-                new SelectListItem { Value = "Suplementos", Text = "Suplementos", Selected = product.Category == "Suplementos" },
-                new SelectListItem { Value = "Ropa", Text = "Ropa", Selected = product.Category == "Ropa" },
-                new SelectListItem { Value = "Accesorios", Text = "Accesorios", Selected = product.Category == "Accesorios" },
-                new SelectListItem { Value = "Equipamiento", Text = "Equipamiento", Selected = product.Category == "Equipamiento" },
-                new SelectListItem { Value = "Otros", Text = "Otros", Selected = product.Category == "Otros" }
+                new SelectListItem { Value = "Supplements", Text = "Supplements", Selected = product.Category == "Supplements" },
+                new SelectListItem { Value = "Clothing", Text = "Clothing", Selected = product.Category == "Clothing" },
+                new SelectListItem { Value = "Accessories", Text = "Accessories", Selected = product.Category == "Accessories" },
+                new SelectListItem { Value = "Equipment", Text = "Equipment", Selected = product.Category == "Equipment" },
+                new SelectListItem { Value = "Other", Text = "Other", Selected = product.Category == "Other" }
             };
 
             return View(product);
         }
+
 
         // GET: Products/Delete/5
         public async Task<IActionResult> Delete(int? id)
@@ -203,12 +207,13 @@ namespace Platinum_Gym_System.Controllers
             {
                 _context.Products.Remove(product);
                 await _context.SaveChangesAsync();
-                TempData["SuccessMessage"] = "Producto eliminado exitosamente.";
+                TempData["SuccessMessage"] = "Product deleted successfully.";
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
 
         private bool ProductExists(int id)
         {

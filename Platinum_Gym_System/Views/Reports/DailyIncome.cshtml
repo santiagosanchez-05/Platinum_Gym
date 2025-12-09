@@ -1,24 +1,24 @@
 ﻿@model List<Platinum_Gym_System.ViewModels.IncomeReportVM>
 
 @{
-    ViewData["Title"] = "Ingresos Diarios (Últimos 7 días)";
+    ViewData["Title"] = "Daily Income (Last 7 Days)";
 }
 
 <div class="container mt-4">
-    <h2>Reporte: Ingresos Diarios (Últimos 7 días)</h2>
+    <h2>Report: Daily Income (Last 7 Days)</h2>
     <hr />
 
     @if (!Model.Any())
     {
-        <div class="alert alert-warning">No existen ingresos registrados en los últimos 7 días.</div>
+        <div class="alert alert-warning">No income recorded in the last 7 days.</div>
     }
     else
     {
         <table class="table table-bordered table-striped mt-3">
             <thead>
                 <tr>
-                    <th>Fecha</th>
-                    <th>Ingresos</th>
+                    <th>Date</th>
+                    <th>Income</th>
                 </tr>
             </thead>
             <tbody>
@@ -32,7 +32,7 @@
             </tbody>
         </table>
 
-        <h4 class="mt-4">Gráfico de ingresos</h4>
+        <h4 class="mt-4">Income Chart</h4>
         <canvas id="incomeChart" height="90"></canvas>
 
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -48,7 +48,7 @@
                 data: {
                     labels: labels,
                     datasets: [{
-                        label: 'Ingresos',
+                        label: 'Income',
                         data: data,
                         borderWidth: 2,
                         fill: false,
@@ -60,5 +60,5 @@
         </script>
     }
 
-    <a asp-controller="Reports" asp-action="Index" class="btn btn-secondary mt-3">Volver</a>
+    <a asp-controller="Reports" asp-action="Index" class="btn btn-secondary mt-3">Back</a>
 </div>

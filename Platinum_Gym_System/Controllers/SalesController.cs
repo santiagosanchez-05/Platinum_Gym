@@ -68,50 +68,50 @@ namespace Platinum_Gym_System.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(SaleCreateVM vm)
         {
-            // 🔹 Siempre recargar productos para la vista (por si hay error y se hace return View(vm))
+            // 🔹 Always reload products for the view (in case validation fails)
             ViewBag.Products = _context.Products
                 .Select(p => new { productId = p.ProductId, productName = p.ProductName, price = p.Price })
                 .ToList();
 
-            // 🔹 Limpiar items vacíos
+            // 🔹 Remove empty items
             vm.Items = (vm.Items ?? new List<SaleDetail>())
                 .Where(x => x.ProductId > 0 && x.Quantity > 0)
                 .ToList();
 
             if (!vm.Items.Any())
             {
-                ModelState.AddModelError("", "Debe agregar al menos un producto.");
+                ModelState.AddModelError("", "You must add at least one product.");
                 return View(vm);
             }
 
-            double totalVenta = 0;
+            double totalSale = 0;
 
-            // 🔹 Validar stock y calcular total
+            // 🔹 Validate stock and calculate total
             foreach (var item in vm.Items)
             {
                 var product = await _context.Products.FindAsync(item.ProductId);
 
                 if (product == null || product.StockQuantity < item.Quantity)
                 {
-                    ModelState.AddModelError("", $"Producto sin stock suficiente: {product?.ProductName}");
+                    ModelState.AddModelError("", $"Insufficient stock for product: {product?.ProductName}");
                     return View(vm);
                 }
 
                 item.Subtotal = product.Price * item.Quantity;
-                totalVenta += item.Subtotal;
+                totalSale += item.Subtotal;
             }
 
-            // 🔹 Si no ingresaron fecha, usar ahora
+            // 🔹 If no sale date is provided, use current time
             if (vm.Sale.SaleDate == default)
                 vm.Sale.SaleDate = DateTime.Now;
 
-            vm.Sale.Total = totalVenta;
+            vm.Sale.Total = totalSale;
 
-            // 1️⃣ Registrar Venta
+            // 1️⃣ Register Sale
             _context.Sales.Add(vm.Sale);
-            await _context.SaveChangesAsync(); // genera SaleId
+            await _context.SaveChangesAsync(); // generates SaleId
 
-            // 2️⃣ Registrar Detalles
+            // 2️⃣ Register Details
             foreach (var item in vm.Items)
             {
                 item.SaleId = vm.Sale.SaleId;
@@ -124,7 +124,7 @@ namespace Platinum_Gym_System.Controllers
 
             await _context.SaveChangesAsync();
 
-            // 3️⃣ Registrar Pagos (si existen)
+            // 3️⃣ Register Payments (if any)
             vm.Payments = (vm.Payments ?? new List<SalePayment>())
                 .Where(p => p.Amount > 0).ToList();
 
@@ -143,10 +143,11 @@ namespace Platinum_Gym_System.Controllers
                 await _context.SaveChangesAsync();
             }
 
-            TempData["Success"] = "Venta registrada exitosamente.";
+            TempData["Success"] = "Sale registered successfully.";
 
             return RedirectToAction(nameof(Index));
         }
+
 
 
 
@@ -263,17 +264,17 @@ namespace Platinum_Gym_System.Controllers
             if (!ModelState.IsValid)
                 return View(vm);
 
-            // Si no está cancelada ya
+            // Only cancel if not already cancelled
             if (!sale.IsCancelled)
             {
                 sale.IsCancelled = true;
                 _context.Update(sale);
 
-                // Obtener usuario actual
+                // Get current logged user
                 var userCI = User.FindFirst("CI")?.Value;
                 var cancelledBy = userCI;
 
-                // Registrar motivo + usuario
+                // Register reason + user
                 var cancellation = new SaleCancellation
                 {
                     SaleId = sale.SaleId,
@@ -284,7 +285,7 @@ namespace Platinum_Gym_System.Controllers
 
                 _context.SaleCancellations.Add(cancellation);
 
-                // Restaurar stock
+                // Restore stock
                 foreach (var detail in sale.SaleDetails)
                 {
                     var product = await _context.Products.FindAsync(detail.ProductId);
@@ -295,9 +296,10 @@ namespace Platinum_Gym_System.Controllers
                 await _context.SaveChangesAsync();
             }
 
-            TempData["Success"] = "Venta anulada correctamente.";
+            TempData["Success"] = "Sale cancelled successfully.";
             return RedirectToAction(nameof(Index));
         }
+
 
 
 

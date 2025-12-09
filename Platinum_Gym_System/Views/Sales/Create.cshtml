@@ -1,18 +1,19 @@
 ﻿@model Platinum_Gym_System.ViewModels.SaleCreateVM
 
-<h2>Crear Venta</h2>
+<h2>Create Sale</h2>
 
 <form asp-action="Create" method="post" id="saleForm">
     <div asp-validation-summary="All" class="text-danger"></div>
+
     <hr />
-    <h4>Productos de la Venta</h4>
+    <h4>Sale Products</h4>
 
     <table class="table" id="DetalleTable">
         <thead>
             <tr>
-                <th>Producto</th>
-                <th>Precio</th>
-                <th>Cantidad</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
                 <th>Subtotal</th>
                 <th></th>
             </tr>
@@ -20,41 +21,41 @@
         <tbody></tbody>
     </table>
 
-    <button type="button" class="btn btn-success" onclick="AgregarDetalle()">Agregar Producto</button>
+    <button type="button" class="btn btn-success" onclick="AgregarDetalle()">Add Product</button>
 
     <hr />
-    <h4>Pagos</h4>
+    <h4>Payments</h4>
 
     <table class="table" id="PaymentsTable">
         <thead>
             <tr>
-                <th>Método</th>
-                <th>Monto</th>
-                <th>Fecha</th>
+                <th>Method</th>
+                <th>Amount</th>
+                <th>Date</th>
                 <th></th>
             </tr>
         </thead>
         <tbody></tbody>
     </table>
 
-    <button type="button" class="btn btn-info" onclick="AgregarPago()">Agregar Pago</button>
+    <button type="button" class="btn btn-info" onclick="AgregarPago()">Add Payment</button>
 
     <hr />
-    <h3>Total Venta: $<span id="TotalDisplay">0.00</span></h3>
+    <h3>Total Sale: $<span id="TotalDisplay">0.00</span></h3>
 
     <input asp-for="Sale.Total" id="TotalHidden" type="hidden" />
 
-    <button type="submit" class="btn btn-primary mt-3">Guardar Venta</button>
+    <button type="submit" class="btn btn-primary mt-3">Save Sale</button>
 </form>
 
 @section Scripts {
     <script>
         var productos = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.Products));
 
-        // ===================== DETALLES =====================
+        // ===================== DETAILS =====================
         function AgregarDetalle() {
             if (!productos || productos.length === 0) {
-                alert("No hay productos cargados en el sistema.");
+                alert("No products available in the system.");
                 return;
             }
 
@@ -125,7 +126,7 @@
             });
         }
 
-        // ===================== PAGOS =====================
+        // ===================== PAYMENTS =====================
         function AgregarPago() {
             var index = $("#PaymentsTable tbody tr").length;
 
@@ -133,8 +134,8 @@
             <tr>
                 <td>
                     <select name="Payments[${index}].PaymentMethod" class="form-control">
-                        <option value="Cash">Efectivo</option>
-                        <option value="Card">Tarjeta</option>
+                        <option value="Cash">Cash</option>
+                        <option value="Card">Card</option>
                     </select>
                 </td>
                 <td>
@@ -182,7 +183,6 @@
             });
 
             $("#TotalDisplay").text(total.toFixed(2));
-            // manda número simple al backend (evitar problemas de cultura)
             $("#TotalHidden").val(total);
         }
 

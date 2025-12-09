@@ -1,21 +1,21 @@
 ﻿@model List<Platinum_Gym_System.ViewModels.ClientIndexVM>
 
-<h2 class="mb-3">Listado de Clientes</h2>
+<h2 class="mb-3">Client List</h2>
 
-<!-- BOTÓN CREAR -->
+<!-- CREATE BUTTON -->
 <a asp-action="Create" class="btn btn-success mb-3">
-    + Registrar Cliente
+    + Register Client
 </a>
 
 <table class="table table-bordered table-striped">
     <thead class="table-dark">
         <tr>
-            <th>Cliente</th>
-            <th>CI</th>
-            <th>Inicio</th>
-            <th>Fin</th>
-            <th>Estado</th>
-            <th style="width:180px;">Acciones</th>
+            <th>Client</th>
+            <th>ID</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Status</th>
+            <th style="width:180px;">Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -29,30 +29,31 @@
                 <td>
                     @if (item.LastSubscription?.State == 1)
                     {
-                        <span class="badge bg-success">Activo</span>
+                        <span class="badge bg-success">Active</span>
                     }
                     else
                     {
-                        <span class="badge bg-danger">Vencido</span>
+                        <span class="badge bg-danger">Expired</span>
                     }
                 </td>
                 <td>
-                    <!-- EDITAR -->
+                    <!-- EDIT -->
                     <a asp-action="Edit"
                        asp-route-id="@item.User.UserId"
                        class="btn btn-warning btn-sm">
-                        Editar
+                        Edit
                     </a>
 
-                    <!-- ELIMINAR -->
+                    <!-- DELETE -->
                     <a asp-action="Delete"
                        asp-route-id="@item.User.UserId"
-                       class="btn btn-danger btn-sm"
-                       >
-                        Eliminar
+                       class="btn btn-danger btn-sm">
+                        Delete
                     </a>
-                     <a asp-action="Renew" asp-route-id="@item.User.UserId" class="btn btn-success btn-sm">
-                        Renovar
+
+                    <!-- RENEW -->
+                    <a asp-action="Renew" asp-route-id="@item.User.UserId" class="btn btn-success btn-sm">
+                        Renew
                     </a>
                 </td>
             </tr>
