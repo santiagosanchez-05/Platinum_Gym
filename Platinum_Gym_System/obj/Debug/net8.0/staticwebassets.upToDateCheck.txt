@@ -2,7 +2,6 @@ wwwroot\css\ClientManagementStyleSheet.css
 wwwroot\css\CreateNewClientStyleSheet.css
 wwwroot\css\Login2StyleSheet.css
 wwwroot\css\LoginStyleSheet.css
-wwwroot\css\ProductStyleSheet.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\js\site.js
@@ -63,3 +62,4 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\css\ProductStyleSheet.css

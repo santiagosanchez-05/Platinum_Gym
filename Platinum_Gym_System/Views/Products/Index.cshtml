@@ -41,7 +41,6 @@
                             <i class="fas fa-boxes"></i>
                             @Html.DisplayNameFor(model => model.StockQuantity)
                         </th>
-                       
                         <th class="col-actions">
                             <i class="fas fa-cogs"></i>
                             Actions
@@ -51,6 +50,9 @@
                 <tbody>
                     @foreach (var item in Model)
                     {
+                        // por si Category viene nulo
+                        var category = item.Category ?? "Other";
+
                         <tr class="product-row">
                             <td class="product-name">
                                 <div class="name-wrapper">
@@ -60,7 +62,7 @@
                             </td>
 
                             <td class="product-category">
-                                <span class="category-badge category-@item.Category.ToLower()">
+                                <span class="category-badge category-@category.ToLower()">
                                     @Html.DisplayFor(modelItem => item.Category)
                                 </span>
                             </td>
@@ -78,7 +80,8 @@
                                     </span>
                                     <div class="stock-bar">
                                         <div class="stock-fill @GetStockClass(item.StockQuantity)"
-                                             style="width: @GetStockPercentage(item.StockQuantity)%"></div>
+                                             style="width: @GetStockPercentage(item.StockQuantity)%">
+                                        </div>
                                     </div>
                                 </div>
                             </td>
@@ -106,15 +109,29 @@
     </div>
 </div>
 
-
 @functions {
-    private string GetStockClass(int stock)
+    // Si StockQuantity es int?, esto la hace segura
+    private string GetStockClass(int? stock)
     {
-        return stock <= 5 ? "critical" : stock <= 15 ? "warning" : "healthy";
+        if (!stock.HasValue)
+            return "unknown";
+
+        if (stock.Value <= 5)
+            return "critical";
+
+        if (stock.Value <= 15)
+            return "warning";
+
+        return "healthy";
     }
 
-    private int GetStockPercentage(int stock)
+    private int GetStockPercentage(int? stock)
     {
-        return Math.Min(stock * 3, 100);
+        if (!stock.HasValue)
+            return 0;
+
+        // Ajusta el factor 3 si quieres otra escala
+        var value = stock.Value * 3;
+        return Math.Min(value, 100);
     }
 }
