@@ -28,10 +28,7 @@ namespace Platinum_Gym_System.Models
         [Required(ErrorMessage = "State is required.")]
         [Display(Name = "Status")]
         public byte State { get; set; }
-        [Display(Name ="Photo")]
-        [RegularExpression(@"^[\w\-/\\]+(\.(jpg|jpeg|png|gif|bmp))$",
-    ErrorMessage = "Must be a valid image path.")]
-        public string? Photo { get; set; }
+        
         [Display(Name = "Email")]
         [EmailAddress(ErrorMessage = "Must be a valid email format.")]
         public string? Email { get; set; }

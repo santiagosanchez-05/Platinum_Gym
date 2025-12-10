@@ -46,14 +46,14 @@
     <input asp-for="Sale.Total" id="TotalHidden" type="hidden" />
 
     <button type="submit" class="btn btn-primary mt-3">Save Sale</button>
-    <a asp-action="Index" class="btn btn-secondary">Back</a>
+    <a asp-action="Index" class="btn btn-secondary mt-3">Back</a>
 </form>
 
 @section Scripts {
     <script>
         var productos = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.Products));
 
-        // ===================== DETAILS =====================
+        // DETAILS 
         function AgregarDetalle() {
             if (!productos || productos.length === 0) {
                 alert("No products available in the system.");
@@ -127,7 +127,7 @@
             });
         }
 
-        // ===================== PAYMENTS =====================
+        //  PAYMENTS 
         function AgregarPago() {
             var index = $("#PaymentsTable tbody tr").length;
 
@@ -176,7 +176,7 @@
             });
         }
 
-        // ===================== TOTAL =====================
+        //  TOTAL 
         function CalcularTotal() {
             var total = 0;
             $(".subtotal").each(function () {

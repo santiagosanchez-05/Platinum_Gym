@@ -17,30 +17,18 @@ namespace Platinum_Gym_System.Controllers
             _context = context;
         }
 
-        // INDEX GENERAL DE REPORTES
         public IActionResult Index()
         {
             return View();
         }
 
-
-        //public async Task<IActionResult> ActiveStudents()
-        //{
-        //    var activos = await _context.Subscriptions
-        //        .Where(s => s.State == 1 && s.EndDate >= DateTime.Now)
-        //        .Select(s => s.UserId)
-        //        .Distinct()
-        //        .CountAsync();
-
-        //    ViewBag.TotalActivos = activos;
-        //    return View();
-        //}
+        // 1. Planes activos
         public async Task<IActionResult> PlansActive()
         {
             var now = DateTime.Now;
 
             var query = await _context.Plans
-                .Where(p => p.State == 1) // opcional: si quieres incluir inactivos quita este Where
+                .Where(p => p.State == 1) 
                 .Select(p => new PlanActiveVM
                 {
                     PlanId = p.PlanId,
@@ -71,7 +59,7 @@ namespace Platinum_Gym_System.Controllers
                 {
                     ProductName = g.Key,
                     Quantity = g.Sum(x => x.Quantity),
-                    Revenue = g.Sum(x => x.Subtotal) // subtotal corresponde al dinero por líneas
+                    Revenue = g.Sum(x => x.Subtotal) 
                 })
                 .OrderByDescending(x => x.Quantity)
                 .ToListAsync();

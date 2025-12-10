@@ -27,7 +27,7 @@ namespace Platinum_Gym_System.Controllers
         // GET: Client
         public async Task<IActionResult> Index()
         {
-            // 1️⃣ ACTUALIZAR SUBSCRIPCIONES VENCIDAS
+            // actualizar suscripciones vencidas
             var expired = await _context.Subscriptions
                 .Where(s => s.State == 1 && s.EndDate < DateTime.Now)
                 .ToListAsync();
@@ -37,7 +37,7 @@ namespace Platinum_Gym_System.Controllers
 
             await _context.SaveChangesAsync();
 
-            // 2️⃣ TRAER CLIENTES CON ÚLTIMA SUSCRIPCIÓN
+            // ultima suscripción
             var clients = await _context.Users
                 .Where(u => u.Role == 3 && u.State == 1)
                 .Select(u => new ClientIndexVM
@@ -107,7 +107,7 @@ namespace Platinum_Gym_System.Controllers
             using var transaction = await _context.Database.BeginTransactionAsync();
             try
             {
-                // 1️⃣ CREATE USER
+               
                 var user = new User
                 {
                     BillingName = vm.BillingName,
@@ -119,10 +119,10 @@ namespace Platinum_Gym_System.Controllers
                 _context.Users.Add(user);
                 await _context.SaveChangesAsync();
 
-                // 2️⃣ GET PLAN
+             
                 var plan = await _context.Plans.FindAsync(vm.PlanId);
 
-                // 3️⃣ CREATE SUBSCRIPTION
+                
                 var subscription = new Subscription
                 {
                     UserId = user.UserId,
@@ -135,7 +135,7 @@ namespace Platinum_Gym_System.Controllers
                 _context.Subscriptions.Add(subscription);
                 await _context.SaveChangesAsync();
 
-                // 4️⃣ CREATE PAYMENT
+                // crear pago
                 var payment = new Payment
                 {
                     SubscriptionId = subscription.SubscriptionId,
@@ -200,7 +200,6 @@ namespace Platinum_Gym_System.Controllers
             if (user == null)
                 return NotFound();
 
-            // ✅ Only update allowed fields
             user.BillingName = formUser.BillingName;
             user.CI = formUser.CI;
 
@@ -216,7 +215,6 @@ namespace Platinum_Gym_System.Controllers
                 throw;
             }
         }
-
 
 
         // GET: Client/Delete/5
@@ -286,16 +284,16 @@ namespace Platinum_Gym_System.Controllers
             try
             {
                 var endDate=DateTime.Now.Date;
-                // 1️⃣ Obtener última suscripción del cliente
+                //get última suscripción
                 var lastSub = await _context.Subscriptions
                     .Where(s => s.UserId == vm.UserId)
                     .OrderByDescending(s => s.EndDate)
                     .FirstOrDefaultAsync();
 
-                // 2️⃣ Obtener el nuevo plan
+                //get nuevo plan
                 var plan = await _context.Plans.FindAsync(vm.PlanId);
 
-                // 3️⃣ Determinar fecha de inicio REALISTA
+               
                 DateTime startDate;
 
                 if (lastSub != null && lastSub.EndDate > DateTime.Now)
@@ -317,7 +315,6 @@ namespace Platinum_Gym_System.Controllers
                 {
                     endDate = startDate.AddMonths(plan.DurationMonths);
                 }
-                    // 4️⃣ Crear nueva suscripción
                     var newSub = new Subscription
                     {
                         UserId = vm.UserId,
@@ -338,7 +335,6 @@ namespace Platinum_Gym_System.Controllers
                     throw;
                 }
 
-                // 5️⃣ Registrar nuevo pago
                 var payment = new Payment
                 {
                     SubscriptionId = newSub.SubscriptionId,

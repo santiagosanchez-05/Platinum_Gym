@@ -1,59 +1,118 @@
 ﻿@model IEnumerable<Platinum_Gym_System.Models.Plan>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Gym Plans";
 }
 
-<h1>Index</h1>
+<link rel="stylesheet" href="~/css/ProductStyleSheet.css" />
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DurationMonths)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.State)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DurationMonths)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.State)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.PlanId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.PlanId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.PlanId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="products-page">
+
+    <div class="products-header">
+        <h1 class="products-title">
+            <i class="fas fa-clipboard-list"></i>
+            Gym Plans
+        </h1>
+
+        <a asp-action="Create" class="btn-create">
+            <i class="fas fa-plus-circle"></i>
+            New Plan
+        </a>
+    </div>
+
+    <div class="products-content">
+        <div class="table-wrapper">
+            <table class="products-table">
+                <thead>
+                    <tr>
+                        <th class="col-name">
+                            <i class="fas fa-tag"></i>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </th>
+
+                        <th class="col-category">
+                            <i class="fas fa-align-left"></i>
+                            @Html.DisplayNameFor(model => model.Description)
+                        </th>
+
+                        <th class="col-price">
+                            <i class="fas fa-clock"></i>
+                            @Html.DisplayNameFor(model => model.DurationMonths)
+                        </th>
+
+                        <th class="col-price">
+                            <i class="fas fa-dollar-sign"></i>
+                            @Html.DisplayNameFor(model => model.Price)
+                        </th>
+
+                        <th class="col-stock">
+                            <i class="fas fa-check-circle"></i>
+                            @Html.DisplayNameFor(model => model.State)
+                        </th>
+
+                        <th class="col-actions">
+                            <i class="fas fa-cogs"></i>
+                            Actions
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr class="product-row">
+
+                            <td class="product-name">
+                                <div class="name-wrapper">
+                                    <i class="fas fa-clipboard"></i>
+                                    @Html.DisplayFor(modelItem => item.Name)
+                                </div>
+                            </td>
+
+                            <td class="product-category">
+                                <span class="category-badge category-info">
+                                    @Html.DisplayFor(modelItem => item.Description)
+                                </span>
+                            </td>
+                            <td class="product-price">
+                                <span class="price-value">
+                                    @Html.DisplayFor(modelItem => item.DurationMonths)
+                                </span>
+                            </td>
+
+                            <td class="product-price">
+                                <span class="price-value">
+                                    @Html.DisplayFor(modelItem => item.Price)
+                                </span>
+                            </td>
+
+                            <td class="product-stock">
+                                <span class="stock-value @(item.State == 1 ? "healthy" : "critical")">
+                                    @Html.DisplayFor(modelItem => item.State)
+                                </span>
+                            </td>
+
+                            <td class="product-actions">
+                                <div class="actions-container">
+                                    <a asp-action="Edit" asp-route-id="@item.PlanId" class="btn-action btn-edit">
+                                        <i class="fas fa-edit"></i> Edit
+                                    </a>
+
+                                    <a asp-action="Details" asp-route-id="@item.PlanId" class="btn-action btn-details">
+                                        <i class="fas fa-eye"></i> Details
+                                    </a>
+
+                                    <a asp-action="Delete" asp-route-id="@item.PlanId" class="btn-action btn-delete">
+                                        <i class="fas fa-trash-alt"></i> Delete
+                                    </a>
+                                </div>
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>

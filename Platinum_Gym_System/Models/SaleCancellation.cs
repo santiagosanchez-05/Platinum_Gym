@@ -21,6 +21,6 @@ namespace Platinum_Gym_System.Models
         [StringLength(250)]
         public string Reason { get; set; }
 
-        public string? CancelledBy { get; set; } // opcional si manejas usuarios
+        public string? CancelledBy { get; set; } 
     }
 }

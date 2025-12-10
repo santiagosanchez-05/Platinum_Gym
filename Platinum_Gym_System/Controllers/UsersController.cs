@@ -32,7 +32,6 @@ namespace Platinum_Gym_System.Controllers
         [HttpPost]
         public async Task<IActionResult> Login2(User model)
         {
-            // Get user only by CI (do not compare password yet)
             var userBD = await _context.Users.FirstOrDefaultAsync(u => u.CI == model.CI);
 
             if (userBD == null)
@@ -53,12 +52,12 @@ namespace Platinum_Gym_System.Controllers
                 return View(model);
             }
 
-            // Verify hashed password
+            // Hashed password
             var hasher = new PasswordHasher<User>();
             var result = hasher.VerifyHashedPassword(
-                userBD,             // stored entity
-                userBD.Password,    // hashed password from DB
-                model.Password      // entered password
+                userBD,             
+                userBD.Password,    
+                model.Password     
             );
 
             if (result != PasswordVerificationResult.Success)
@@ -169,53 +168,18 @@ namespace Platinum_Gym_System.Controllers
                 return View(model);
             }
 
-            // ❌ NOT A CLIENT → REDIRECT TO LOGIN2
             if (userClient.Role != 3)
             {
                 return RedirectToAction(nameof(Login2));
             }
 
-            // ✅ GET LAST ACTIVE SUBSCRIPTION
-            //var lastSub = await _context.Subscriptions
-            //    .Where(s => s.UserId == userClient.UserId && s.State == 1)
-            //    .OrderByDescending(s => s.EndDate)
-            //    .FirstOrDefaultAsync();
 
-            //// ❗ UPDATE STATUS IF EXPIRED
-            //if (lastSub != null && lastSub.EndDate < DateTime.Now)
-            //{
-            //    lastSub.State = 0;
-            //    _context.Subscriptions.Update(lastSub);
-            //    await _context.SaveChangesAsync();
-
-            //    // ⚠️ RENEW POPUP
-            //    TempData["WelcomeClient"] = $"⚠️ {userClient.BillingName}";
-            //    TempData["CI"] = userClient.CI;
-            //    TempData["ExpireDate"] = "RENEW YOUR SUBSCRIPTION";
-
-            //    model.CI = "";
-            //    ModelState.Clear();
-            //    return View(model);
-            //}
-
-
-            //// ✅ CLIENTE ACTIVO → BIENVENIDO NORMAL
-            //TempData["WelcomeClient"] = userClient.BillingName;
-            //TempData["CI"] = userClient.CI;
-            //TempData["ExpireDate"] = lastSub?.EndDate.ToString("dd/MM/yyyy");
-
-            //model.CI = "";
-            //ModelState.Clear();
-
-            //return View(model);
-
-            // Obtener última suscripción ACTIVA
+            // Obtener última suscripción 
             var lastSub = await _context.Subscriptions
                 .Where(s => s.UserId == userClient.UserId)
                 .OrderByDescending(s => s.EndDate)
                 .FirstOrDefaultAsync();
 
-            // Si NO tiene suscripción → acceso denegado
             if (lastSub == null || lastSub.State == 0)
             {
                 TempData["ExpiredClient"] = userClient.BillingName;
@@ -227,7 +191,7 @@ namespace Platinum_Gym_System.Controllers
                 return View(model);
             }
 
-            // Si existe pero está expirada → actualizar y denegar
+            // Si existe pero está expirada
             if (lastSub.EndDate < DateTime.Now)
             {
                 lastSub.State = 0;
@@ -243,7 +207,6 @@ namespace Platinum_Gym_System.Controllers
                 return View(model);
             }
 
-            // Caso válido → Welcome
             TempData["WelcomeClient"] = userClient.BillingName;
             TempData["CI"] = userClient.CI;
             TempData["ExpireDate"] = lastSub.EndDate.ToString("dd/MM/yyyy");
@@ -386,13 +349,11 @@ namespace Platinum_Gym_System.Controllers
             {
                 try
                 {
-                    // Keep original password
                     user.Password = userBD.Password;
 
                     _context.Update(user);
                     await _context.SaveChangesAsync();
 
-                    // ✅ Send email ONLY if it was changed
                     if (correoCambiado)
                     {
                         await EmailService.SendAsync(

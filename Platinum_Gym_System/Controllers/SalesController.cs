@@ -300,9 +300,5 @@ namespace Platinum_Gym_System.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-
-
-
-
     }
 }

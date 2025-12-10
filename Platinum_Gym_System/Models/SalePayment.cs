@@ -6,7 +6,7 @@ namespace Platinum_Gym_System.Models
     public class SalePayment
     {
         [Key]
-        public int SalePaymentId { get; set; } // <-- Aquí va
+        public int SalePaymentId { get; set; } 
 
         [Required]
         public int SaleId { get; set; }

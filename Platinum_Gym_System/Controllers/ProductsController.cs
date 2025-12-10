@@ -67,7 +67,6 @@ namespace Platinum_Gym_System.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ProductId,ProductName,Category,Price,StockQuantity,ProductImage")] Product product)
         {
-            // Validate if a product with the same name already exists
             var existingProduct = await _context.Products
                 .FirstOrDefaultAsync(p => p.ProductName.ToLower() == product.ProductName.ToLower());
 
@@ -84,7 +83,7 @@ namespace Platinum_Gym_System.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            // Reload categories if validation fails
+ 
             ViewBag.Categories = new List<SelectListItem>
             {
                 new SelectListItem { Value = "Supplements", Text = "Supplements" },
@@ -135,7 +134,7 @@ namespace Platinum_Gym_System.Controllers
                 return NotFound();
             }
 
-            // Validate unique name excluding the current product
+            // Validación
             var existingProduct = await _context.Products
                 .FirstOrDefaultAsync(p => p.ProductName.ToLower() == product.ProductName.ToLower() && p.ProductId != id);
 
