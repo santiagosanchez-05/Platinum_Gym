@@ -15,6 +15,7 @@ namespace Platinum_Gym_System.Models
         public string? Description { get; set; }
 
         [Required]
+        [Display(Name = "Duration Months")]
         public int DurationMonths { get; set; }
 
         [Required]

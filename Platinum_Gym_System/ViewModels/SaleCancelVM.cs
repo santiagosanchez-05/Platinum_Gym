@@ -6,7 +6,7 @@ namespace Platinum_Gym_System.ViewModels
     {
         public int SaleId { get; set; }
 
-        [Required(ErrorMessage = "Debe ingresar un motivo")]
+        [Required(ErrorMessage = "You must enter a reason")]
         [StringLength(250)]
         public string Reason { get; set; }
     }

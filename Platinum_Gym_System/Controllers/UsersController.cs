@@ -176,38 +176,82 @@ namespace Platinum_Gym_System.Controllers
             }
 
             // ✅ GET LAST ACTIVE SUBSCRIPTION
+            //var lastSub = await _context.Subscriptions
+            //    .Where(s => s.UserId == userClient.UserId && s.State == 1)
+            //    .OrderByDescending(s => s.EndDate)
+            //    .FirstOrDefaultAsync();
+
+            //// ❗ UPDATE STATUS IF EXPIRED
+            //if (lastSub != null && lastSub.EndDate < DateTime.Now)
+            //{
+            //    lastSub.State = 0;
+            //    _context.Subscriptions.Update(lastSub);
+            //    await _context.SaveChangesAsync();
+
+            //    // ⚠️ RENEW POPUP
+            //    TempData["WelcomeClient"] = $"⚠️ {userClient.BillingName}";
+            //    TempData["CI"] = userClient.CI;
+            //    TempData["ExpireDate"] = "RENEW YOUR SUBSCRIPTION";
+
+            //    model.CI = "";
+            //    ModelState.Clear();
+            //    return View(model);
+            //}
+
+
+            //// ✅ CLIENTE ACTIVO → BIENVENIDO NORMAL
+            //TempData["WelcomeClient"] = userClient.BillingName;
+            //TempData["CI"] = userClient.CI;
+            //TempData["ExpireDate"] = lastSub?.EndDate.ToString("dd/MM/yyyy");
+
+            //model.CI = "";
+            //ModelState.Clear();
+
+            //return View(model);
+
+            // Obtener última suscripción ACTIVA
             var lastSub = await _context.Subscriptions
-                .Where(s => s.UserId == userClient.UserId && s.State == 1)
+                .Where(s => s.UserId == userClient.UserId)
                 .OrderByDescending(s => s.EndDate)
                 .FirstOrDefaultAsync();
 
-            // ❗ UPDATE STATUS IF EXPIRED
-            if (lastSub != null && lastSub.EndDate < DateTime.Now)
+            // Si NO tiene suscripción → acceso denegado
+            if (lastSub == null || lastSub.State == 0)
             {
-                lastSub.State = 0;
-                _context.Subscriptions.Update(lastSub);
-                await _context.SaveChangesAsync();
-
-                // ⚠️ RENEW POPUP
-                TempData["WelcomeClient"] = $"⚠️ {userClient.BillingName}";
+                TempData["ExpiredClient"] = userClient.BillingName;
                 TempData["CI"] = userClient.CI;
-                TempData["ExpireDate"] = "RENEW YOUR SUBSCRIPTION";
+                TempData["ExpireDate"] = lastSub?.EndDate.ToString("dd/MM/yyyy") ?? "No record";
 
                 model.CI = "";
                 ModelState.Clear();
                 return View(model);
             }
 
+            // Si existe pero está expirada → actualizar y denegar
+            if (lastSub.EndDate < DateTime.Now)
+            {
+                lastSub.State = 0;
+                _context.Subscriptions.Update(lastSub);
+                await _context.SaveChangesAsync();
 
-            // ✅ CLIENTE ACTIVO → BIENVENIDO NORMAL
+                TempData["ExpiredClient"] = userClient.BillingName;
+                TempData["CI"] = userClient.CI;
+                TempData["ExpireDate"] = lastSub.EndDate.ToString("dd/MM/yyyy");
+
+                model.CI = "";
+                ModelState.Clear();
+                return View(model);
+            }
+
+            // Caso válido → Welcome
             TempData["WelcomeClient"] = userClient.BillingName;
             TempData["CI"] = userClient.CI;
-            TempData["ExpireDate"] = lastSub?.EndDate.ToString("dd/MM/yyyy");
+            TempData["ExpireDate"] = lastSub.EndDate.ToString("dd/MM/yyyy");
 
             model.CI = "";
             ModelState.Clear();
-
             return View(model);
+
         }
 
 

@@ -21,7 +21,7 @@ namespace Platinum_Gym_System.Models
         public Product? Product { get; set; }
 
         [Required]
-        [Range(1, int.MaxValue, ErrorMessage = "La cantidad debe ser mínimo 1")]
+        [Range(1, int.MaxValue, ErrorMessage = "Quantity must be at least 1.")]
         public int Quantity { get; set; }
 
         [Required]

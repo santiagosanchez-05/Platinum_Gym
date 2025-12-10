@@ -14,7 +14,7 @@ namespace Platinum_Gym_System.Models
         [DataType(DataType.DateTime)]
         public DateTime SaleDate { get; set; }
 
-        [Required(ErrorMessage = "El total es obligatorio")]
+        [Required(ErrorMessage = "The total is required")]
         [Range(0.01, 999999)]
         [DataType(DataType.Currency)]
         public double Total { get; set; }
