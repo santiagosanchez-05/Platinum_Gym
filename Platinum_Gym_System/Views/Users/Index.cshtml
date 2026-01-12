@@ -4,10 +4,12 @@
     ViewData["Title"] = "Index";
 }
 <link rel="stylesheet" href="~/css/ClientManagementStyleSheet.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 <!-- Page Header -->
 <div class="page-header">
-    <h1 class="page-title">Client Management</h1>
-    <p class="page-subtitle">Manage client information, email banking, and history.</p>
+    <h1 class="page-title">User Management</h1>
+    <p class="page-subtitle">Manage user information, email banking, and history.</p>
 </div>
 
 <!-- Search and Actions -->
@@ -55,15 +57,8 @@
 <!-- Clients Table -->
 <div class="card">
     <div class="card-header d-flex justify-content-between align-items-center">
-        <h5 class="mb-0">All Clients</h5>
-        <div>
-            <button class="btn btn-sm btn-outline-secondary me-2">
-                <i class="fas fa-filter me-1"></i> Filter
-            </button>
-            <button class="btn btn-sm btn-outline-secondary">
-                <i class="fas fa-download me-1"></i> Export
-            </button>
-        </div>
+        <h5 class="mb-0">All Users</h5>
+        
     </div>
     <div class="card-body p-0">
         <div class="table-responsive">
@@ -71,11 +66,11 @@
                 <thead>
                     <tr>
                         <th>@Html.DisplayNameFor(model => model.BillingName)</th>
+                        <th>@Html.DisplayNameFor(model => model.Email)</th>
                         <th>@Html.DisplayNameFor(model => model.CI)</th>
                         <th>@Html.DisplayNameFor(model => model.Password)</th>
                         <th>@Html.DisplayNameFor(model => model.Role)</th>
                         <th>@Html.DisplayNameFor(model => model.State)</th>
-                        <th>@Html.DisplayNameFor(model => model.Photo)</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -83,13 +78,14 @@
                     @foreach (var item in Model) {
                     <tr>
                         <td>@Html.DisplayFor(modelItem => item.BillingName)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Email)</td>
                         <td>@Html.DisplayFor(modelItem => item.CI)</td>
                         <td>••••••••</td> <!-- Mostrar contraseña oculta -->
                         <td>
                             @if(item.Role == 1) {
                                 <span class="status-badge status-active">Admin</span>
                             } else if(item.Role == 2) {
-                                <span class="status-badge status-pending">Recepcionista</span>
+                                <span class="status-badge status-pending">Recepcionist</span>
                             } else {
                                 <span>@Html.DisplayFor(modelItem => item.Role)</span>
                             }
@@ -99,13 +95,6 @@
                                 <span class="status-badge status-active">Active</span>
                             } else {
                                 <span class="status-badge status-inactive">Inactive</span>
-                            }
-                        </td>
-                        <td>
-                            @if(!string.IsNullOrEmpty(item.Photo)) {
-                                <i class="fas fa-id-card text-primary"></i>
-                            } else {
-                                <span class="text-muted">No photo</span>
                             }
                         </td>
                         <td>

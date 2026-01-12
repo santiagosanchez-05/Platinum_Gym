@@ -1,0 +1,21 @@
+﻿@model Platinum_Gym_System.ViewModels.SaleCancelVM
+
+<h2>Cancel Sale</h2>
+<p>Please enter the reason for canceling this sale.</p>
+
+<form asp-action="Cancel" method="post">
+    <input type="hidden" asp-for="SaleId" />
+
+    <div class="mb-3">
+        <label asp-for="Reason"></label>
+        <textarea asp-for="Reason" class="form-control"></textarea>
+        <span asp-validation-for="Reason" class="text-danger"></span>
+    </div>
+
+    <button class="btn btn-danger" type="submit">Confirm Cancellation</button>
+    <a asp-action="Index" class="btn btn-secondary">Back</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

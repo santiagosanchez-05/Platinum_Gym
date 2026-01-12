@@ -1,9 +1,11 @@
-using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Platinum_Gym_System.Models;
+using System.Diagnostics;
 
 namespace Platinum_Gym_System.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

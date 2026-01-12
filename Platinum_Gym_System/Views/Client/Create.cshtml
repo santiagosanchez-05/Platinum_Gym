@@ -1,0 +1,40 @@
+﻿@model Platinum_Gym_System.ViewModels.ClientCreateVM
+
+<h2>Create Client</h2>
+
+<form asp-action="Create">
+
+    <div class="form-group">
+        <label>Billing Name</label>
+        <input asp-for="BillingName" class="form-control" />
+        <span asp-validation-for="BillingName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>CI</label>
+        <input asp-for="CI" class="form-control" />
+        <span asp-validation-for="CI" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Plan</label>
+        <select asp-for="PlanId" class="form-control"
+                asp-items="@(new SelectList(Model.Plans, "PlanId", "Name"))">
+            <option value="">-- Select Plan --</option>
+        </select>
+        <span asp-validation-for="PlanId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Paymenth Method</label>
+        <select asp-for="PaymentMethod" class="form-control">
+            <option>Cash</option>
+            <option>QR</option>
+            <option>Card</option>
+        </select>
+        <span asp-validation-for="PaymentMethod" class="text-danger"></span>
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>

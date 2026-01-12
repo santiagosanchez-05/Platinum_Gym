@@ -1,66 +1,429 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\PLATINIUM\\Platinum_Gym\\",
+  "WorkspaceRootPath": "D:\\Platinum_Gym\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|e:\\platinium\\platinum_gym\\platinum_gym_system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\migrations\\20251124150922_adduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\migrations\\20251124150922_adduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|e:\\platinium\\platinum_gym\\platinum_gym_system\\views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|e:\\platinium\\platinum_gym\\platinum_gym_system\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|e:\\platinium\\platinum_gym\\platinum_gym_system\\views\\users\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\users\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|e:\\platinium\\platinum_gym\\platinum_gym_system\\views\\users\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\users\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|e:\\platinium\\platinum_gym\\platinum_gym_system\\views\\users\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\users\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|e:\\platinium\\platinum_gym\\platinum_gym_system\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|e:\\platinium\\platinum_gym\\platinum_gym_system\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|e:\\platinium\\platinum_gym\\platinum_gym_system\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|e:\\platinium\\platinum_gym\\platinum_gym_system\\views\\users\\login2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\users\\login2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|e:\\platinium\\platinum_gym\\platinum_gym_system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|e:\\platinium\\platinum_gym\\platinum_gym_system\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|e:\\platinium\\platinum_gym\\platinum_gym_system\\migrations\\20251124152435_addpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\migrations\\20251124152435_addpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|e:\\platinium\\platinum_gym\\platinum_gym_system\\migrations\\20251124152159_better.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\migrations\\20251124152159_better.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\migrations\\20251124152159_better.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|e:\\platinium\\platinum_gym\\platinum_gym_system\\migrations\\20251124150922_adduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\migrations\\20251124150922_adduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\migrations\\20251124152435_addpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\migrations\\20251124152435_addpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\migrations\\20251124234419_addemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\migrations\\20251124234419_addemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\migrations\\20251128151005_addproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\migrations\\20251128151005_addproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\migrations\\20251130221114_addsubscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\migrations\\20251130221114_addsubscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\migrations\\20251130221224_addplans.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\migrations\\20251130221224_addplans.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\migrations\\20251130221358_changeprices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\migrations\\20251130221358_changeprices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\migrations\\20251202235532_migrationwarning.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\migrations\\20251202235532_migrationwarning.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\migrations\\20251206163520_addsalecancellationtables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\migrations\\20251206163520_addsalecancellationtables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\migrations\\20251206160725_addsale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\migrations\\20251206160725_addsale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\wwwroot\\css\\productstylesheet.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\wwwroot\\css\\productstylesheet.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\plans\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\plans\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\reports\\snackssold.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\reports\\snackssold.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\reports\\dailyincome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\reports\\dailyincome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\users\\login2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\users\\login2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\client\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\client\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\client\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\client\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\users\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\users\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\products\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\products\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\products\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\products\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\products\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\products\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\products\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\products\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\users\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\users\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\users\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\users\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\users\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\users\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\users\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\users\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\sales\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\sales\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\users\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\users\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\subscriptions\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\subscriptions\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\subscriptions\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\subscriptions\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\subscriptions\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\subscriptions\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\subscriptions\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\subscriptions\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\subscriptions\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\subscriptions\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\sales\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\sales\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\sales\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\sales\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\sales\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\sales\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\sales\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\sales\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\sales\\cancel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\sales\\cancel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\salepayments\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\salepayments\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\salepayments\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\salepayments\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\salepayments\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\salepayments\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\salepayments\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\salepayments\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\salepayments\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\salepayments\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\saledetails\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\saledetails\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\saledetails\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\saledetails\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\saledetails\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\saledetails\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\saledetails\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\saledetails\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\saledetails\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\saledetails\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\reports\\plansactive.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\reports\\plansactive.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\reports\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\reports\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\reports\\activestudents.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\reports\\activestudents.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\plans\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\plans\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\plans\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\plans\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\plans\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\plans\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\plans\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\plans\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\client\\renew.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\client\\renew.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\client\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\client\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\client\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\client\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\views\\client\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\views\\client\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\viewmodels\\subscriptionrenewvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\viewmodels\\subscriptionrenewvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\viewmodels\\snackreportvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\viewmodels\\snackreportvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\viewmodels\\salecreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\viewmodels\\salecreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\viewmodels\\salecancelvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\viewmodels\\salecancelvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\viewmodels\\planactivevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\viewmodels\\planactivevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\viewmodels\\incomereport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\viewmodels\\incomereport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\viewmodels\\clientindexvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\viewmodels\\clientindexvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\viewmodels\\clientcreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\viewmodels\\clientcreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\models\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\models\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\models\\salepayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\models\\salepayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\models\\saledetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\models\\saledetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\models\\salecancellation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\models\\salecancellation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\models\\sale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\models\\sale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\models\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\models\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\models\\plan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\models\\plan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\controllers\\salescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\controllers\\salescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\controllers\\salepaymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\controllers\\salepaymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\controllers\\saledetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\controllers\\saledetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\controllers\\planscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\controllers\\planscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251206160034_AddSale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\platinum_gym_system.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\platinum_gym_system.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\wwwroot\\css\\loginstylesheet.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\wwwroot\\css\\loginstylesheet.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\wwwroot\\css\\clientmanagementstylesheet.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\wwwroot\\css\\clientmanagementstylesheet.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|d:\\platinum_gym\\platinum_gym_system\\wwwroot\\css\\createnewclientstylesheet.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{FF4BA735-2DE2-4F74-8AEF-7F2FA83C5C70}|Platinum_Gym_System\\Platinum_Gym_System.csproj|solutionrelative:platinum_gym_system\\wwwroot\\css\\createnewclientstylesheet.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -69,191 +432,1316 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 293,
-          "SelectedChildIndex": 5,
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Views\\Users\\Index.cshtml",
-              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Users\\Index.cshtml",
-              "ToolTip": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Views\\Users\\Index.cshtml",
-              "RelativeToolTip": "Platinum_Gym_System\\Views\\Users\\Index.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADcAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T01:58:14.265Z",
+              "DocumentIndex": 0,
+              "Title": "20251124150922_addUser.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251124150922_addUser.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Migrations\\20251124150922_addUser.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251124150922_addUser.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Migrations\\20251124150922_addUser.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T05:45:09.301Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Platinum_Gym_System\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAkwBkAAABgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T00:02:34.479Z"
+              "DocumentIndex": 1,
+              "Title": "20251124152159_better.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251124152159_better.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Migrations\\20251124152159_better.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251124152159_better.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Migrations\\20251124152159_better.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T05:45:06.61Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "Platinum_Gym_System\\Controllers\\UsersController.cs",
-              "ToolTip": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "Platinum_Gym_System\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAkwG4AAAAgAAAAAAAAAA==",
+              "Title": "20251124152435_addPassword.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251124152435_addPassword.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Migrations\\20251124152435_addPassword.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251124152435_addPassword.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Migrations\\20251124152435_addPassword.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T15:25:16.612Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Services\\EmailService.cs",
-              "RelativeDocumentMoniker": "Platinum_Gym_System\\Services\\EmailService.cs",
-              "ToolTip": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Services\\EmailService.cs",
-              "RelativeToolTip": "Platinum_Gym_System\\Services\\EmailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T00:04:27.442Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Views\\Users\\Create.cshtml",
-              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Users\\Create.cshtml",
-              "ToolTip": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Views\\Users\\Create.cshtml",
-              "RelativeToolTip": "Platinum_Gym_System\\Views\\Users\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-24T23:34:06.049Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Program.cs",
-              "RelativeDocumentMoniker": "Platinum_Gym_System\\Program.cs",
-              "ToolTip": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Program.cs",
-              "RelativeToolTip": "Platinum_Gym_System\\Program.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACQAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T14:59:37.816Z",
+              "WhenOpened": "2025-12-10T05:45:03.864Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "20251124234419_addemail.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251124234419_addemail.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Migrations\\20251124234419_addemail.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251124234419_addemail.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Migrations\\20251124234419_addemail.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T05:45:00.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20251202235532_MigrationWarning.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251202235532_MigrationWarning.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Migrations\\20251202235532_MigrationWarning.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251202235532_MigrationWarning.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Migrations\\20251202235532_MigrationWarning.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T05:44:46.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20251130221358_changePrices.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251130221358_changePrices.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Migrations\\20251130221358_changePrices.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251130221358_changePrices.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Migrations\\20251130221358_changePrices.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T22:13:58.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20251130221224_addPlans.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251130221224_addPlans.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Migrations\\20251130221224_addPlans.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251130221224_addPlans.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Migrations\\20251130221224_addPlans.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T22:12:24.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20251130221114_addSubscription.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251130221114_addSubscription.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Migrations\\20251130221114_addSubscription.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251130221114_addSubscription.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Migrations\\20251130221114_addSubscription.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T22:11:14.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20251128151005_AddProduct.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251128151005_AddProduct.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Migrations\\20251128151005_AddProduct.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251128151005_AddProduct.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Migrations\\20251128151005_AddProduct.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T15:10:05.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "20251206163520_AddSaleCancellationTables.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251206163520_AddSaleCancellationTables.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Migrations\\20251206163520_AddSaleCancellationTables.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251206163520_AddSaleCancellationTables.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Migrations\\20251206163520_AddSaleCancellationTables.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T05:44:41.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Controllers\\ProductsController.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T15:10:47.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ProductStyleSheet.css",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\wwwroot\\css\\ProductStyleSheet.css",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\wwwroot\\css\\ProductStyleSheet.css",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\wwwroot\\css\\ProductStyleSheet.css",
+              "RelativeToolTip": "Platinum_Gym_System\\wwwroot\\css\\ProductStyleSheet.css",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAEMAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-28T15:13:44.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\appsettings.json",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\appsettings.json",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\appsettings.json",
+              "RelativeToolTip": "Platinum_Gym_System\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-26T15:11:51.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AppDBContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\AppDBContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Migrations\\AppDBContextModelSnapshot.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\AppDBContextModelSnapshot.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Migrations\\AppDBContextModelSnapshot.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAgwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T16:10:12.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Products\\Index.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Products\\Index.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Products\\Index.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Products\\Index.cshtml",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAiwIkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-28T15:14:02.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Plans\\Index.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Plans\\Index.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Plans\\Index.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Plans\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T13:39:36.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20251206160725_AddSale.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251206160725_AddSale.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Migrations\\20251206160725_AddSale.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251206160725_AddSale.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Migrations\\20251206160725_AddSale.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAADUAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T00:41:32.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Users\\Index.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Users\\Index.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Users\\Index.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Users\\Index.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAADwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-26T01:58:14.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DailyIncome.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Reports\\DailyIncome.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Reports\\DailyIncome.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Reports\\DailyIncome.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Reports\\DailyIncome.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-08T13:51:49.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "SnacksSold.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Reports\\SnacksSold.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Reports\\SnacksSold.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Reports\\SnacksSold.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Reports\\SnacksSold.cshtml",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAiwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-08T13:51:13.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\wwwroot\\css\\site.css",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "Platinum_Gym_System\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-10T05:38:12.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Login2.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Users\\Login2.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Users\\Login2.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Users\\Login2.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Users\\Login2.cshtml",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAAAFUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-08T01:04:21.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Client\\Details.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Client\\Details.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Client\\Details.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Client\\Details.cshtml",
+              "ViewState": "AgIAABkAAAAAAAAAAAD4vykAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T13:43:16.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Client\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Client\\Delete.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Client\\Delete.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Client\\Delete.cshtml",
+              "ViewState": "AgIAABQAAAAAAAAAAAAEwCoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-03T15:02:05.351Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T13:18:36.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAIwBMAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-25T00:02:34.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
               "Title": "ChangePassword.cshtml",
-              "DocumentMoniker": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Views\\Users\\ChangePassword.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Users\\ChangePassword.cshtml",
               "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Users\\ChangePassword.cshtml",
-              "ToolTip": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Views\\Users\\ChangePassword.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Users\\ChangePassword.cshtml",
               "RelativeToolTip": "Platinum_Gym_System\\Views\\Users\\ChangePassword.cshtml",
-              "ViewState": "AgIAABYAAAAAAAAAAAAkwDIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-25T21:18:33.95Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Views\\Users\\Login.cshtml",
-              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Users\\Login.cshtml",
-              "ToolTip": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Views\\Users\\Login.cshtml",
-              "RelativeToolTip": "Platinum_Gym_System\\Views\\Users\\Login.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABYAAAAaAAAAAAAAAA==",
+              "DocumentIndex": 28,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Products\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Products\\Edit.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Products\\Edit.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Products\\Edit.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACMAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-24T15:26:35.87Z"
+              "WhenOpened": "2025-12-08T15:53:16.776Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "20251124152435_addPassword.cs",
-              "DocumentMoniker": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251124152435_addPassword.cs",
-              "RelativeDocumentMoniker": "Platinum_Gym_System\\Migrations\\20251124152435_addPassword.cs",
-              "ToolTip": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251124152435_addPassword.cs",
-              "RelativeToolTip": "Platinum_Gym_System\\Migrations\\20251124152435_addPassword.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T15:24:35.389Z"
+              "DocumentIndex": 27,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Products\\Details.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Products\\Details.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Products\\Details.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Products\\Details.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-10T03:02:16.164Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "20251124152159_better.cs",
-              "DocumentMoniker": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251124152159_better.cs",
-              "RelativeDocumentMoniker": "Platinum_Gym_System\\Migrations\\20251124152159_better.cs",
-              "ToolTip": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251124152159_better.cs",
-              "RelativeToolTip": "Platinum_Gym_System\\Migrations\\20251124152159_better.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T15:21:59.491Z"
+              "DocumentIndex": 29,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Products\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Products\\Delete.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Products\\Delete.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Products\\Delete.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-10T03:02:34.795Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "20251124150922_addUser.cs",
-              "DocumentMoniker": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251124150922_addUser.cs",
-              "RelativeDocumentMoniker": "Platinum_Gym_System\\Migrations\\20251124150922_addUser.cs",
-              "ToolTip": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251124150922_addUser.cs",
-              "RelativeToolTip": "Platinum_Gym_System\\Migrations\\20251124150922_addUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T15:09:22.983Z"
+              "DocumentIndex": 30,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Products\\Create.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Products\\Create.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Products\\Create.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Products\\Create.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACIAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-03T00:17:05.543Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 31,
               "Title": "User.cs",
-              "DocumentMoniker": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Models\\User.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Models\\User.cs",
               "RelativeDocumentMoniker": "Platinum_Gym_System\\Models\\User.cs",
-              "ToolTip": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Models\\User.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Models\\User.cs",
               "RelativeToolTip": "Platinum_Gym_System\\Models\\User.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAowB4AAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-24T14:29:12.339Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Login2.cshtml",
-              "DocumentMoniker": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Views\\Users\\Login2.cshtml",
-              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Users\\Login2.cshtml",
-              "ToolTip": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Views\\Users\\Login2.cshtml",
-              "RelativeToolTip": "Platinum_Gym_System\\Views\\Users\\Login2.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAlAAAAAAAAAA==",
+              "DocumentIndex": 32,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Users\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Users\\Edit.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Users\\Edit.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Users\\Edit.cshtml",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAAFoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-24T15:52:48.485Z"
+              "WhenOpened": "2025-11-26T14:31:42.634Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\appsettings.json",
-              "RelativeDocumentMoniker": "Platinum_Gym_System\\appsettings.json",
-              "ToolTip": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\appsettings.json",
-              "RelativeToolTip": "Platinum_Gym_System\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-24T15:06:13.329Z"
+              "DocumentIndex": 33,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Users\\Details.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Users\\Details.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Users\\Details.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Users\\Details.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAC0AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-26T14:33:45.566Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 34,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Users\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Users\\Delete.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Users\\Delete.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Users\\Delete.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACwAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-30T21:54:28.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Users\\Create.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Users\\Create.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Users\\Create.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Users\\Create.cshtml",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAADEAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-24T23:34:06.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T13:24:10.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Sales\\Create.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Sales\\Create.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Sales\\Create.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Sales\\Create.cshtml",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-06T15:48:51.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Users\\Login.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Users\\Login.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Users\\Login.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Users\\Login.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAIwFAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-24T15:26:35.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Subscriptions\\Index.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Subscriptions\\Index.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Subscriptions\\Index.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Subscriptions\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-03T04:27:34.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Subscriptions\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Subscriptions\\Edit.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Subscriptions\\Edit.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Subscriptions\\Edit.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T13:30:09.083Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Subscriptions\\Details.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Subscriptions\\Details.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Subscriptions\\Details.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Subscriptions\\Details.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T13:30:04.651Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Subscriptions\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Subscriptions\\Delete.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Subscriptions\\Delete.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Subscriptions\\Delete.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T13:29:52.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Subscriptions\\Create.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Subscriptions\\Create.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Subscriptions\\Create.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Subscriptions\\Create.cshtml",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAABMAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-03T02:58:05.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-10T02:52:22.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-10T02:52:21.865Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Sales\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Sales\\Edit.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Sales\\Edit.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Sales\\Edit.cshtml",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-06T16:59:52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Sales\\Details.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Sales\\Details.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Sales\\Details.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Sales\\Details.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAFwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-06T16:42:13.159Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Sales\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Sales\\Delete.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Sales\\Delete.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Sales\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T13:31:45.277Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Cancel.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Sales\\Cancel.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Sales\\Cancel.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Sales\\Cancel.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Sales\\Cancel.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-06T16:59:28.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\SalePayments\\Index.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\SalePayments\\Index.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\SalePayments\\Index.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\SalePayments\\Index.cshtml",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T13:33:34.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\SalePayments\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\SalePayments\\Edit.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\SalePayments\\Edit.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\SalePayments\\Edit.cshtml",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T13:33:40.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Sales\\Index.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Sales\\Index.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Sales\\Index.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Sales\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-06T16:39:06.841Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\SalePayments\\Details.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\SalePayments\\Details.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\SalePayments\\Details.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\SalePayments\\Details.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T13:33:39.808Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\SalePayments\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\SalePayments\\Delete.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\SalePayments\\Delete.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\SalePayments\\Delete.cshtml",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T13:33:58.55Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\SalePayments\\Create.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\SalePayments\\Create.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\SalePayments\\Create.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\SalePayments\\Create.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T13:34:07.259Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\SaleDetails\\Index.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\SaleDetails\\Index.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\SaleDetails\\Index.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\SaleDetails\\Index.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T23:36:23.131Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\SaleDetails\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\SaleDetails\\Edit.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\SaleDetails\\Edit.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\SaleDetails\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-10T02:50:37.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\SaleDetails\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\SaleDetails\\Delete.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\SaleDetails\\Delete.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\SaleDetails\\Delete.cshtml",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T13:34:36.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\SaleDetails\\Create.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\SaleDetails\\Create.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\SaleDetails\\Create.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\SaleDetails\\Create.cshtml",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T13:34:40.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "PlansActive.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Reports\\PlansActive.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Reports\\PlansActive.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Reports\\PlansActive.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Reports\\PlansActive.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-08T14:45:23.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Reports\\Index.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Reports\\Index.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Reports\\Index.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Reports\\Index.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-08T13:42:40.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "ActiveStudents.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Reports\\ActiveStudents.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Reports\\ActiveStudents.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Reports\\ActiveStudents.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Reports\\ActiveStudents.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-08T13:50:06.714Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\SaleDetails\\Details.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\SaleDetails\\Details.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\SaleDetails\\Details.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\SaleDetails\\Details.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T13:34:31.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Plans\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Plans\\Edit.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Plans\\Edit.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Plans\\Edit.cshtml",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T13:39:47.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Plans\\Details.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Plans\\Details.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Plans\\Details.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Plans\\Details.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T13:39:53.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Plans\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Plans\\Delete.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Plans\\Delete.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Plans\\Delete.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T13:40:01.113Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Plans\\Create.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Plans\\Create.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Plans\\Create.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Plans\\Create.cshtml",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T13:40:06.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "Renew.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Client\\Renew.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Client\\Renew.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Client\\Renew.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Client\\Renew.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-03T04:23:15.761Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Client\\Index.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Client\\Index.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Client\\Index.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Client\\Index.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAADUAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-01T17:49:00.799Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Client\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Client\\Edit.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Client\\Edit.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Client\\Edit.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAIwBAAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-03T14:54:29.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Client\\Create.cshtml",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Views\\Client\\Create.cshtml",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Views\\Client\\Create.cshtml",
+              "RelativeToolTip": "Platinum_Gym_System\\Views\\Client\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-01T17:50:43.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "SubscriptionRenewVM.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\ViewModels\\SubscriptionRenewVM.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\ViewModels\\SubscriptionRenewVM.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\ViewModels\\SubscriptionRenewVM.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\ViewModels\\SubscriptionRenewVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T04:16:02.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "SnackReportVM.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\ViewModels\\SnackReportVM.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\ViewModels\\SnackReportVM.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\ViewModels\\SnackReportVM.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\ViewModels\\SnackReportVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T13:36:56.807Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "SaleCreateVM.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\ViewModels\\SaleCreateVM.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\ViewModels\\SaleCreateVM.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\ViewModels\\SaleCreateVM.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\ViewModels\\SaleCreateVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T23:15:02.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "SaleCancelVM.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\ViewModels\\SaleCancelVM.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\ViewModels\\SaleCancelVM.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\ViewModels\\SaleCancelVM.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\ViewModels\\SaleCancelVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T16:36:44.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "PlanActiveVM.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\ViewModels\\PlanActiveVM.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\ViewModels\\PlanActiveVM.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\ViewModels\\PlanActiveVM.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\ViewModels\\PlanActiveVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T14:43:21.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "IncomeReport.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\ViewModels\\IncomeReport.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\ViewModels\\IncomeReport.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\ViewModels\\IncomeReport.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\ViewModels\\IncomeReport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T13:37:27.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "ClientIndexVM.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\ViewModels\\ClientIndexVM.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\ViewModels\\ClientIndexVM.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\ViewModels\\ClientIndexVM.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\ViewModels\\ClientIndexVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T18:09:06.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "ClientCreateVM.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\ViewModels\\ClientCreateVM.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\ViewModels\\ClientCreateVM.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\ViewModels\\ClientCreateVM.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\ViewModels\\ClientCreateVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T18:07:11.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Services\\EmailService.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Services\\EmailService.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Services\\EmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T23:14:43.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "Subscription.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Models\\Subscription.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Models\\Subscription.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Models\\Subscription.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Models\\Subscription.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAUwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T22:06:35.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "SalePayment.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Models\\SalePayment.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Models\\SalePayment.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Models\\SalePayment.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Models\\SalePayment.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAIwAgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T14:49:10.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "SaleDetail.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Models\\SaleDetail.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Models\\SaleDetail.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Models\\SaleDetail.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Models\\SaleDetail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T13:45:08.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "SaleCancellation.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Models\\SaleCancellation.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Models\\SaleCancellation.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Models\\SaleCancellation.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Models\\SaleCancellation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T00:48:15.072Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "Sale.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Models\\Sale.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Models\\Sale.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Models\\Sale.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Models\\Sale.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T13:44:13.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
+              "Title": "ProductDTO.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Models\\ProductDTO.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Models\\ProductDTO.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Models\\ProductDTO.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Models\\ProductDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T00:27:02.202Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 87,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Models\\Product.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Models\\Product.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Models\\Product.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T15:05:55.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 88,
+              "Title": "Plan.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Models\\Plan.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Models\\Plan.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Models\\Plan.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Models\\Plan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T22:06:09.387Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 89,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Models\\Payment.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Models\\Payment.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Models\\Payment.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Models\\Payment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T22:10:14.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 90,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Models\\ErrorViewModel.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T23:10:31.316Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 91,
               "Title": "AppDBContext.cs",
-              "DocumentMoniker": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Data\\AppDBContext.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Data\\AppDBContext.cs",
               "RelativeDocumentMoniker": "Platinum_Gym_System\\Data\\AppDBContext.cs",
-              "ToolTip": "E:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Data\\AppDBContext.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Data\\AppDBContext.cs",
               "RelativeToolTip": "Platinum_Gym_System\\Data\\AppDBContext.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-24T14:58:46.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 92,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Controllers\\UsersController.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAAAF4BAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T15:25:16.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 93,
+              "Title": "SalesController.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Controllers\\SalesController.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Controllers\\SalesController.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Controllers\\SalesController.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Controllers\\SalesController.cs",
+              "ViewState": "AgIAABEBAAAAAAAAAAAiwCwBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T15:42:48.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 94,
+              "Title": "SalePaymentsController.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Controllers\\SalePaymentsController.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Controllers\\SalePaymentsController.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Controllers\\SalePaymentsController.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Controllers\\SalePaymentsController.cs",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAAAAsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T15:28:08.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 95,
+              "Title": "SaleDetailsController.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Controllers\\SaleDetailsController.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Controllers\\SaleDetailsController.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Controllers\\SaleDetailsController.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Controllers\\SaleDetailsController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAA0AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T15:46:15.903Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 96,
+              "Title": "ReportsController.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Controllers\\ReportsController.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Controllers\\ReportsController.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Controllers\\ReportsController.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Controllers\\ReportsController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAABgAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T13:35:03.543Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 97,
+              "Title": "PlansController.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Controllers\\PlansController.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Controllers\\PlansController.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Controllers\\PlansController.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Controllers\\PlansController.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T22:17:40.219Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 98,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T14:57:23.62Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 99,
+              "Title": "ClientController.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Controllers\\ClientController.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Controllers\\ClientController.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Controllers\\ClientController.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Controllers\\ClientController.cs",
+              "ViewState": "AgIAALoAAAAAAAAAAAAAANoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T17:48:00.976Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 100,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Program.cs",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Program.cs",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Program.cs",
+              "RelativeToolTip": "Platinum_Gym_System\\Program.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAIwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T15:45:48.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 101,
+              "Title": "20251206160034_AddSale.cs",
+              "DocumentMoniker": "D:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251206160034_AddSale.cs",
+              "RelativeDocumentMoniker": "..\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251206160034_AddSale.cs",
+              "ToolTip": "D:\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251206160034_AddSale.cs",
+              "RelativeToolTip": "..\\PLATINIUM\\Platinum_Gym\\Platinum_Gym_System\\Migrations\\20251206160034_AddSale.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T16:00:34.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 102,
+              "Title": "Platinum_Gym_System.csproj",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\Platinum_Gym_System.csproj",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\Platinum_Gym_System.csproj",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\Platinum_Gym_System.csproj",
+              "RelativeToolTip": "Platinum_Gym_System\\Platinum_Gym_System.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-03T00:28:02.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 103,
+              "Title": "LoginStyleSheet.css",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\wwwroot\\css\\LoginStyleSheet.css",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\wwwroot\\css\\LoginStyleSheet.css",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\wwwroot\\css\\LoginStyleSheet.css",
+              "RelativeToolTip": "Platinum_Gym_System\\wwwroot\\css\\LoginStyleSheet.css",
+              "ViewState": "AgIAAJcAAAAAAAAAAIBZwLgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-26T14:25:55.548Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 104,
+              "Title": "ClientManagementStyleSheet.css",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\wwwroot\\css\\ClientManagementStyleSheet.css",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\wwwroot\\css\\ClientManagementStyleSheet.css",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\wwwroot\\css\\ClientManagementStyleSheet.css",
+              "RelativeToolTip": "Platinum_Gym_System\\wwwroot\\css\\ClientManagementStyleSheet.css",
+              "ViewState": "AgIAAC0BAAAAAAAAAAAowF0BAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-26T14:36:05.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 105,
+              "Title": "CreateNewClientStyleSheet.css",
+              "DocumentMoniker": "D:\\Platinum_Gym\\Platinum_Gym_System\\wwwroot\\css\\CreateNewClientStyleSheet.css",
+              "RelativeDocumentMoniker": "Platinum_Gym_System\\wwwroot\\css\\CreateNewClientStyleSheet.css",
+              "ToolTip": "D:\\Platinum_Gym\\Platinum_Gym_System\\wwwroot\\css\\CreateNewClientStyleSheet.css",
+              "RelativeToolTip": "Platinum_Gym_System\\wwwroot\\css\\CreateNewClientStyleSheet.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-26T14:40:51.291Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1165,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             }
           ]
         }

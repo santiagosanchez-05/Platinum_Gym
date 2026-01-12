@@ -1,0 +1,28 @@
+﻿@model Platinum_Gym_System.ViewModels.SubscriptionRenewVM
+
+<h2>Renew Subscription</h2>
+
+<form asp-action="Renew">
+    <input type="hidden" asp-for="UserId" />
+
+    <div class="form-group">
+        <label>Plan</label>
+        <select asp-for="PlanId" class="form-control"
+                asp-items="@(new SelectList(Model.Plans, "PlanId", "Name"))">
+            <option value="">-- Select Plan --</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Payment Method</label>
+        <select asp-for="PaymentMethod" class="form-control">
+            <option>Cash</option>
+            <option>QR</option>
+            <option>Card</option>
+        </select>
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-success">Renew</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

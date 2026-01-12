@@ -1,0 +1,62 @@
+﻿@model List<Platinum_Gym_System.ViewModels.ClientIndexVM>
+
+<h2 class="mb-3">Client List</h2>
+
+<!-- CREATE BUTTON -->
+<a asp-action="Create" class="btn btn-success mb-3">
+    + Register Client
+</a>
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Client</th>
+            <th>ID</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Status</th>
+            <th style="width:180px;">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.User.BillingName</td>
+                <td>@item.User.CI</td>
+                <td>@item.LastSubscription?.StartDate.ToShortDateString()</td>
+                <td>@item.LastSubscription?.EndDate.ToShortDateString()</td>
+                <td>
+                    @if (item.LastSubscription?.State == 1)
+                    {
+                        <span class="badge bg-success">Active</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">Expired</span>
+                    }
+                </td>
+                <td>
+                    
+                    <a asp-action="Edit"
+                       asp-route-id="@item.User.UserId"
+                       class="btn btn-warning btn-sm">
+                        Edit
+                    </a>
+
+                   
+                    <a asp-action="Delete"
+                       asp-route-id="@item.User.UserId"
+                       class="btn btn-danger btn-sm">
+                        Delete
+                    </a>
+
+                  
+                    <a asp-action="Renew" asp-route-id="@item.User.UserId" class="btn btn-success btn-sm">
+                        Renew
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

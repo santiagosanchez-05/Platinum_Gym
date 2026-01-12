@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Platinum_Gym_System.Data;
 using Platinum_Gym_System.Models;
+using Platinum_Gym_System.Services;
+using Platinum_Gym_System.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +15,6 @@ using System.Net;
 using System.Net.Mail;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using Platinum_Gym_System.Services;
 namespace Platinum_Gym_System.Controllers
 {
     public class UsersController : Controller
@@ -29,42 +30,52 @@ namespace Platinum_Gym_System.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> login2(User model)
+        public async Task<IActionResult> Login2(User model)
         {
-            // Obtener usuario solo por CI (no compares contraseña aquí)
             var userBD = await _context.Users.FirstOrDefaultAsync(u => u.CI == model.CI);
 
-            // Usuario no encontrado
             if (userBD == null)
             {
                 ViewBag.Error = "User not found";
                 return View(model);
             }
 
-            // Verificar contraseña hasheada
+            if (userBD.Role == 3)
+            {
+                ViewBag.Error = "This login is only for gym staff.";
+                return View();
+            }
+
+            if (model.Password == null)
+            {
+                ViewBag.Error = "You must enter a password.";
+                return View(model);
+            }
+
+            // Hashed password
             var hasher = new PasswordHasher<User>();
             var result = hasher.VerifyHashedPassword(
-                userBD,             // entidad encontrada
-                userBD.Password,    // hash guardado en la BD
-                model.Password      // contraseña ingresada
+                userBD,             
+                userBD.Password,    
+                model.Password     
             );
 
             if (result != PasswordVerificationResult.Success)
             {
-                ViewBag.Error = "Incorrect password";
+                ViewBag.Error = "Incorrect password.";
                 return View(model);
             }
-            
-            // Construcción de claims (manteniendo tus variables)
+
+            // Build claims
             byte rol = userBD.Role;
             string CI = userBD.CI;
 
             var claims = new List<Claim>
-    {
-        new Claim(ClaimTypes.Name, "User"),
-        new Claim("CI", CI),
-        new Claim(ClaimTypes.Role, rol.ToString())
-    };
+            {
+                new Claim(ClaimTypes.Name, "User"),
+                new Claim("CI", CI),
+                new Claim(ClaimTypes.Role, rol.ToString())
+            };
 
             var claimsIdentity = new ClaimsIdentity(
                 claims,
@@ -75,12 +86,16 @@ namespace Platinum_Gym_System.Controllers
                 CookieAuthenticationDefaults.AuthenticationScheme,
                 new ClaimsPrincipal(claimsIdentity)
             );
+
+            // Force password change rule
             if (model.Password.StartsWith("156"))
             {
                 return RedirectToAction("ChangePassword", new { ci = userBD.CI });
             }
+
             return RedirectToAction("Index", "Home");
         }
+
         public IActionResult ChangePassword(string ci)
         {
             if (string.IsNullOrEmpty(ci))
@@ -100,21 +115,23 @@ namespace Platinum_Gym_System.Controllers
 
             if (newPassword != confirmPassword)
             {
-                ViewBag.Error = "Las contraseñas no coinciden.";
+                ViewBag.Error = "Passwords do not match.";
                 ViewBag.CI = ci;
                 return View();
             }
+
             if (newPassword.StartsWith("156"))
             {
-                ViewBag.Error = "Contrasena no valida";
+                ViewBag.Error = "Invalid password.";
                 ViewBag.CI = ci;
-                return View();  
+                return View();
             }
+
             var user = await _context.Users.FirstOrDefaultAsync(u => u.CI == ci);
 
             if (user == null)
             {
-                ViewBag.Error = "Usuario no encontrado";
+                ViewBag.Error = "User not found.";
                 ViewBag.CI = ci;
                 return View();
             }
@@ -125,56 +142,86 @@ namespace Platinum_Gym_System.Controllers
             _context.Users.Update(user);
             await _context.SaveChangesAsync();
 
-            ViewBag.Success = "La contraseña se cambió correctamente.";
+            ViewBag.Success = "Password changed successfully.";
             ViewBag.CI = ci;
 
             return View();
         }
+
 
         public IActionResult Login()
         {
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> login(User model)
+        public async Task<IActionResult> Login(User model)
         {
-            //var user =await _context.Users.FirstOrDefaultAsync(w=>w.Email==model.Email && w.Password==model.Password);
-            //if (user != null) {
-            //    return RedirectToAction("Index", "Home");
-            //}
-            //ViewBag.Error = "Incorrect Credentials";
-            //return View(model);
-            var userLogin = from u in _context.Users
-                            where u.CI == model.CI
-                            select new
-                            {
-                                u,
-                                RoleName = u.Role
-                            };
-            if (userLogin.Any())
-            {
-                byte rol = userLogin.First().RoleName;
-                string CI = userLogin.First().u.CI;
+            var userClient = await _context.Users
+                .FirstOrDefaultAsync(u => u.CI == model.CI && u.State == 1);
 
-               
-                if (rol != 3)
-                {
-                    return RedirectToAction(nameof(Login2));
-                }
-                else
-                {
-                    ViewBag.UserName=userLogin.First().u.BillingName;
-                    return View();
-                }
+            // ❌ CLIENT NOT FOUND
+            if (userClient == null)
+            {
+                ViewBag.Error = "Client not registered.";
+                model.CI = "";
+                ModelState.Clear();
+                return View(model);
             }
-            ViewBag.Error = "Usuario no registrado";
-            return View();
+
+            if (userClient.Role != 3)
+            {
+                return RedirectToAction(nameof(Login2));
+            }
+
+
+            // Obtener última suscripción 
+            var lastSub = await _context.Subscriptions
+                .Where(s => s.UserId == userClient.UserId)
+                .OrderByDescending(s => s.EndDate)
+                .FirstOrDefaultAsync();
+
+            if (lastSub == null || lastSub.State == 0)
+            {
+                TempData["ExpiredClient"] = userClient.BillingName;
+                TempData["CI"] = userClient.CI;
+                TempData["ExpireDate"] = lastSub?.EndDate.ToString("dd/MM/yyyy") ?? "No record";
+
+                model.CI = "";
+                ModelState.Clear();
+                return View(model);
+            }
+
+            // Si existe pero está expirada
+            if (lastSub.EndDate < DateTime.Now)
+            {
+                lastSub.State = 0;
+                _context.Subscriptions.Update(lastSub);
+                await _context.SaveChangesAsync();
+
+                TempData["ExpiredClient"] = userClient.BillingName;
+                TempData["CI"] = userClient.CI;
+                TempData["ExpireDate"] = lastSub.EndDate.ToString("dd/MM/yyyy");
+
+                model.CI = "";
+                ModelState.Clear();
+                return View(model);
+            }
+
+            TempData["WelcomeClient"] = userClient.BillingName;
+            TempData["CI"] = userClient.CI;
+            TempData["ExpireDate"] = lastSub.EndDate.ToString("dd/MM/yyyy");
+
+            model.CI = "";
+            ModelState.Clear();
+            return View(model);
+
         }
+
 
         // GET: Users
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Users.ToListAsync());
+            return View(await _context.Users.Where(u=>u.State==1&&u.Role!=3).ToListAsync());
         }
 
         // GET: Users/Details/5
@@ -209,34 +256,46 @@ namespace Platinum_Gym_System.Controllers
         public async Task<IActionResult> Create([Bind("UserId,BillingName,CI,Password,Role,State,Photo,Email")] User user)
         {
             var user1 = await _context.Users.FirstOrDefaultAsync(u => u.CI == user.CI);
+            var user2 = await _context.Users.FirstOrDefaultAsync(u => u.Email == user.Email);
+
             if (user1 != null)
             {
-                ModelState.AddModelError(string.Empty, "No puede haber dos usuarios con el mismo CI");
+                ModelState.AddModelError(string.Empty, "There cannot be two users with the same ID number (CI).");
+            }
+            if (user2 != null)
+            {
+                ModelState.AddModelError(string.Empty, "There cannot be two users with the same email address.");
             }
             if (user.Email == null)
             {
-                ModelState.AddModelError(string.Empty, "El correo es obligatorio");
-
+                ModelState.AddModelError(string.Empty, "Email is required.");
             }
-            
+
             if (ModelState.IsValid)
             {
                 var random = new Random();
-                string Password ="156"+user.BillingName.Substring(0, 2)+user.CI+random.Next(100, 999);
+                string Password = "156" + user.BillingName.Substring(0, 2) + user.CI + random.Next(100, 999);
                 Console.Write(Password);
+
                 var hasher = new PasswordHasher<User>();
                 string hash = hasher.HashPassword(user, Password);
-                user.Password= hash;
+                user.Password = hash;
+
                 _context.Add(user);
                 await _context.SaveChangesAsync();
-                await EmailService.SendAsync(user.Email, "Tu acceso al sistema",
-                $"Tu contraseña generada es: {Password}");
+
+                await EmailService.SendAsync(
+                    user.Email,
+                    "Your system access",
+                    $"Your generated password is: {Password}"
+                );
 
                 return RedirectToAction(nameof(Index));
             }
+
             return View(user);
         }
-        
+
 
         // GET: Users/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -255,39 +314,70 @@ namespace Platinum_Gym_System.Controllers
         }
 
         // POST: Users/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("UserId,BillingName,CI,Password,Role,State,Photo")] User user)
+        public async Task<IActionResult> Edit(int id, [Bind("UserId,BillingName,CI,Role,State,Photo,Email")] User user)
         {
             if (id != user.UserId)
-            {
                 return NotFound();
+
+            var userBD = await _context.Users.AsNoTracking()
+                             .FirstOrDefaultAsync(u => u.UserId == id);
+
+            if (userBD == null)
+                return NotFound();
+
+            bool correoCambiado = userBD.Email != user.Email;
+
+            var user1 = await _context.Users.FirstOrDefaultAsync(u => u.CI == user.CI);
+            var user2 = await _context.Users.FirstOrDefaultAsync(u => u.Email == user.Email);
+
+            if (user1 != null)
+            {
+                ModelState.AddModelError(string.Empty, "There cannot be two users with the same ID number (CI).");
+            }
+            if (user2 != null)
+            {
+                ModelState.AddModelError(string.Empty, "There cannot be two users with the same email address.");
+            }
+            if (user.Email == null)
+            {
+                ModelState.AddModelError(string.Empty, "Email is required.");
             }
 
             if (ModelState.IsValid)
             {
                 try
                 {
+                    user.Password = userBD.Password;
+
                     _context.Update(user);
                     await _context.SaveChangesAsync();
+
+                    if (correoCambiado)
+                    {
+                        await EmailService.SendAsync(
+                            user.Email,
+                            "Email change successful",
+                            $"Hi {user.BillingName}, your email address was successfully updated in the system."
+                        );
+                    }
                 }
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!UserExists(user.UserId))
-                    {
                         return NotFound();
-                    }
                     else
-                    {
                         throw;
-                    }
                 }
+
                 return RedirectToAction(nameof(Index));
             }
+
             return View(user);
         }
+
+
 
         // GET: Users/Delete/5
         public async Task<IActionResult> Delete(int? id)
@@ -325,6 +415,11 @@ namespace Platinum_Gym_System.Controllers
         private bool UserExists(int id)
         {
             return _context.Users.Any(e => e.UserId == id);
+        }
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction(nameof(Login));
         }
     }
 }

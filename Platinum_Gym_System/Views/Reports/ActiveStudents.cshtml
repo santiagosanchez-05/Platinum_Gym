@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Alumnos Activos";
+}
+
+<div class="container mt-4">
+    <h2>Reporte: Alumnos Activos</h2>
+    <hr />
+
+    <div class="alert alert-primary mt-3">
+        <h4>Total de alumnos activos: <strong>@ViewBag.TotalActivos</strong></h4>
+    </div>
+
+    <a asp-controller="Reports" asp-action="Index" class="btn btn-secondary">Volver</a>
+</div>

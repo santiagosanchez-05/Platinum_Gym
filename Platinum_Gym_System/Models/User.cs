@@ -6,34 +6,31 @@ namespace Platinum_Gym_System.Models
     {
         [Key]
         public int UserId {  get; set; }
-        [Required(ErrorMessage = "El nombre es obligatorio")] //Es obligatorio
-        [Display(Name = "Razon social")] // Cambiar el nombre en pantalla
+        [Required(ErrorMessage = "Name is required")]
+        [Display(Name = "Billing Name")] // Cambiar el nombre en pantalla
         [StringLength(50, ErrorMessage = "{0} must be: minimum {2} and maxmum {1} character long ", MinimumLength = 3)]
         public string? BillingName { get; set; }
-        [Required(ErrorMessage = "El CI es obligatorio.")]
+        [Required(ErrorMessage = "CI is required.")]
         [RegularExpression(@"^\d{5,10}(-?[A-Za-z]{1,2})?$",
-         ErrorMessage = "Formato inválido. Ejemplos válidos: 1234567, 1234567LP, 1234567-LP, 1234567A")]
+          ErrorMessage = "Invalid format. Valid examples: 1234567, 1234567LP, 1234567-LP, 1234567A")]
         public string? CI { get; set; }
         [StringLength(25, ErrorMessage = "Password must be minimun 6 and maximun 25 character long", MinimumLength = 6)]
-        [Display(Name = "Contraseña")]
+        [Display(Name = "Password")]
         [RegularExpression(
         @"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).+$",
-        ErrorMessage = "Debe contener mayúscula, minúscula y número.")]
+        ErrorMessage = "Must contain uppercase, lowercase, and a number.")]
         public string? Password { get; set; }
         // 1 admin, 2 recepcionista, 3 cliente
-        [Required(ErrorMessage ="El rol es obligatorio")]
-        [Display(Name ="Rol")]
+        [Required(ErrorMessage = "Role is required")]
+        [Display(Name ="Role")]
         public byte Role { get; set; }
         //1 activo 2 inactivo
-        [Required(ErrorMessage ="El estado es obligatorio")]
-        [Display(Name ="Estado")]
+        [Required(ErrorMessage = "State is required.")]
+        [Display(Name = "Status")]
         public byte State { get; set; }
-        [Display(Name ="Foto")]
-        [RegularExpression(@"^[\w\-/\\]+(\.(jpg|jpeg|png|gif|bmp))$",
-    ErrorMessage = "Debe ser una ruta válida de imagen.")]
-        public string? Photo { get; set; }
-        [Display(Name ="Correo")]
-        [EmailAddress(ErrorMessage ="El correo tiene que tener formato de mail")]
+        
+        [Display(Name = "Email")]
+        [EmailAddress(ErrorMessage = "Must be a valid email format.")]
         public string? Email { get; set; }
 
     }
